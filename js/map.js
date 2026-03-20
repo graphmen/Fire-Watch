@@ -179,13 +179,16 @@ function renderBurnedAreas(geojson) {
     },
     onEachFeature(feature, layer) {
       const p = feature.properties;
+      const bdate = p.burn_date || 'Unknown';
+      const bmonth = p.month_str || '';
+      
       layer.bindPopup(`
         <div class="fire-popup">
-          <h4>🔥 Burn Scar — ${p.id}</h4>
+          <h4 style="color:var(--burn-orange)">🔥 Burn Scar — ${bmonth}</h4>
           <div class="meta">📍 ${p.province}</div>
-          <div class="meta">🌳 Park: ${p.park}</div>
-          <div class="meta">📅 Burn date: ${p.burn_date}</div>
+          <div class="meta">📅 Burn Date: <b>${bdate}</b></div>
           <div class="meta">📐 Area: <b>${p.area_ha.toLocaleString()} ha</b></div>
+          <div class="meta" style="font-size:9px; color:var(--text-muted); margin-top:5px;">Source: ${p.source}</div>
         </div>
       `);
     }
@@ -193,10 +196,14 @@ function renderBurnedAreas(geojson) {
 }
 
 function daysSinceBurn(dateStr) {
-  const diff = new Date('2026-03-20') - new Date(dateStr);
-  return Math.floor(diff / 86400000);
+  if (!dateStr) return 999;
+  try {
+    const burn = new Date(dateStr);
+    const now  = new Date(); // Use actual now
+    const diff = now - burn;
+    return Math.max(0, Math.floor(diff / (1000 * 60 * 60 * 24)));
+  } catch(e) { return 999; }
 }
-
 // ── Fire points layer (EMA Red/Yellow scheme) ───────────────
 function renderFires(features) {
   fireLayer.clearLayers();

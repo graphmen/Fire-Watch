@@ -84,11 +84,12 @@ function buildBurnedByProvince(burnedFeatures) {
   const agg = {};
   burnedFeatures.forEach(f => {
     const p = f.properties;
-    agg[p.province] = (agg[p.province] || 0) + p.area_ha;
+    const prov = (p.province || 'UNKNOWN').toUpperCase();
+    agg[prov] = (agg[prov] || 0) + (p.area_ha || 0);
   });
   const sorted = Object.entries(agg).sort((a, b) => b[1] - a[1]);
   return {
-    labels: sorted.map(e => e[0].replace('Mashonaland ', 'Mshnlnd ')),
+    labels: sorted.map(e => e[0].replace('MASHONALAND ', 'MSHLND ')),
     data:   sorted.map(e => Math.round(e[1] / 1000)),
     raw:    sorted.map(e => e[1])
   };

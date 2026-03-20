@@ -16,11 +16,10 @@ let _filterState = {
 function populateProvinceDropdown(fires, provincialGJ) {
   let provinces;
   if (provincialGJ && provincialGJ.features) {
-    // Use proper names from the real boundary file, title-cased
     provinces = provincialGJ.features
       .map(f => f.properties.province_n)
       .filter(Boolean)
-      .map(n => n.split(' ').map(w => w[0] + w.slice(1).toLowerCase()).join(' '))
+      .map(n => n.toUpperCase())
       .sort();
   } else {
     // Fallback: derive from fire data
@@ -61,7 +60,11 @@ function filterFires() {
 
     if (dt < start || dt > end) return false;
     if (!_filterState.confidence.includes(p.confidence)) return false;
-    if (_filterState.province !== 'all' && p.province !== _filterState.province) return false;
+    if (_filterState.province !== 'all') {
+      const p1 = (p.province || '').toUpperCase();
+      const p2 = _filterState.province.toUpperCase();
+      if (p1 !== p2) return false;
+    }
     if (_filterState.landcover !== 'all' && p.landcover !== _filterState.landcover) return false;
     if (_filterState.nearPark && p.near_park === 'none') return false;
     return true;
