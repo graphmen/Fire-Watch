@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zimbabwe Veld Fire Monitoring — EMA Dashboard</title>
+  <meta name="description"
+    content="NearRealTime Veld Fire Monitoring and Early Response Dashboard for Zimbabwe's Environment Management Agency (EMA) and Civil Protection Unit." />
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════════════════
+     TOP NAVIGATION BAR
+══════════════════════════════════════════════════ -->
+  <header class="topbar" role="banner">
+    <a href="#" class="topbar-logo">
+      <div class="logo-icon">🔥</div>
+      <div>
+        <span>ZimFireWatch</span>
+        <span class="logo-sub">EMA &amp; Civil Protection</span>
+      </div>
+    </a>
+
+    <div class="topbar-title">
+      <h1>NearRealTime Veld Fire Monitoring &amp; Early Response Dashboard</h1>
+      <p>Zimbabwe National Geospatial and Space Agency — 2025/2026 Fire Season</p>
+    </div>
+
+    <div class="topbar-status">
+      <span class="dot"></span>
+      LIVE — VIIRS &amp; MODIS
+    </div>
+
+    <div class="topbar-time" id="topbar-clock"></div>
+
+    <div class="topbar-actions">
+      <button class="btn-icon" id="btn-toggle-sidebar" title="Toggle Filters Sidebar">⬤◫</button>
+      <button class="btn-icon" id="btn-open-alerts" title="Configure Alerts">🔔</button>
+      <button class="btn-icon" id="btn-toggle-panel" title="Toggle Analytics Panel">📊</button>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════════
+     MAIN LAYOUT
+══════════════════════════════════════════════════ -->
+  <div class="app-layout">
+
+    <!-- ── LEFT SIDEBAR ──────────────────────────────── -->
+    <aside class="sidebar" id="sidebar" role="complementary" aria-label="Filters and Controls">
+
+      <!-- Section: Quick Stats -->
+      <div class="sidebar-section">
+        <div class="section-header">
+          <span class="section-title">🛰 Active Detections</span>
+          <span class="section-toggle open">▾</span>
+        </div>
+        <div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:6px 0;">
+            <span class="fire-count-number" id="active-fire-count">—</span>
+            <span class="fire-count-badge" id="filter-badge">loading…</span>
+          </div>
+          <div style="font-size:10px;color:#7A937A;">fire points visible on map (current filters)</div>
+        </div>
+      </div>
+
+      <!-- Section: Date & Time Filter -->
+      <div class="sidebar-section">
+        <div class="section-header">
+          <span class="section-title">📅 Date Range</span>
+          <span class="section-toggle open">▾</span>
+        </div>
+        <div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="filter-date-start">From</label>
+              <input type="date" class="form-control" id="filter-date-start" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="filter-date-end">To</label>
+              <input type="date" class="form-control" id="filter-date-end" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section: Time Slider -->
+      <div class="sidebar-section">
+        <div class="section-header">
+          <span class="section-title">⏱ Season Animation</span>
+          <span class="section-toggle open">▾</span>
+        </div>
+        <div class="time-slider-wrap">
+          <div class="time-slider-labels">
+            <span>Jul 2025</span><span>Oct 2025</span><span>Mar 2026</span>
+          </div>
+          <input type="range" class="time-slider" id="sidebar-time-slider" min="0" max="262" value="262" />
+          <div class="time-slider-value" id="sidebar-slider-value">20 Mar 2026</div>
+          <div class="time-slider-controls">
+            <button class="btn-sm btn-primary" id="btn-play-slider">▶ Play</button>
+            <button class="btn-sm btn-outline" id="btn-reset-slider">↺ Reset</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section: Detection Confidence -->
+      <div class="sidebar-section">
+        <div class="section-header">
+          <span class="section-title">🎯 Confidence</span>
+          <span class="section-toggle open">▾</span>
+        </div>
+        <div class="checkbox-group">
+          <label class="checkbox-item">
+            <input type="checkbox" id="conf-high" checked />
+            <span class="checkbox-box"></span>
+            <span class="checkbox-label">High Confidence</span>
+            <span class="checkbox-badge badge-high">VIIRS/MODIS</span>
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="conf-low" checked />
+            <span class="checkbox-box"></span>
+            <span class="checkbox-label">Low Confidence</span>
+            <span class="checkbox-badge badge-low">MODIS</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Section: Region Filters -->
+      <div class="sidebar-section">
+        <div class="section-header">
+          <span class="section-title">🗺 Region</span>
+          <span class="section-toggle open">▾</span>
+        </div>
+        <div>
+          <div class="form-group">
+            <label class="form-label" for="filter-province">Administrative Province</label>
+            <select class="form-control" id="filter-province">
+              <option value="all">All Provinces</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="filter-landcover">Land Cover Type</label>
+            <select class="form-control" id="filter-landcover">
+              <option value="all">All Land Cover</option>
+            </select>
+          </div>
+          <label class="checkbox-item" style="margin-top:6px;">
+            <input type="checkbox" id="filter-near-park" />
+            <span class="checkbox-box"></span>
+            <span class="checkbox-label">Near Protected Area Only</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Section: Map Layers -->
+      <div class="sidebar-section">
+        <div class="section-header">
+          <span class="section-title">🗂 Map Layers</span>
+          <span class="section-toggle open">▾</span>
+        </div>
+        <div class="layer-toggles">
+          <div class="layer-toggle on" id="toggle-fires">
+            <span class="layer-dot" style="background:#ef4444;"></span>
+            <span class="layer-label">Active Fire Points</span>
+            <span class="toggle-switch"></span>
+          </div>
+          <div class="layer-toggle on" id="toggle-burned">
+            <span class="layer-dot" style="background:#f97316;border-radius:2px;"></span>
+            <span class="layer-label">Burned Area Polygons</span>
+            <span class="toggle-switch"></span>
+          </div>
+          <div class="layer-toggle on" id="toggle-admin">
+            <span class="layer-dot" style="background:#1565C0;border-radius:2px;"></span>
+            <span class="layer-label">Province Boundaries</span>
+            <span class="toggle-switch"></span>
+          </div>
+          <div class="layer-toggle" id="toggle-districts">
+            <span class="layer-dot" style="background:#5C6BC0;border-radius:2px;"></span>
+            <span class="layer-label">District Boundaries</span>
+            <span class="toggle-switch"></span>
+          </div>
+          <div class="layer-toggle" id="toggle-wards" title="Click to load 1,970 ward boundaries (28MB)">
+            <span class="layer-dot" style="background:#9575CD;border-radius:2px;"></span>
+            <span class="layer-label">Ward Boundaries <span style="font-size:9px;color:#9575CD;">(on-demand)</span></span>
+            <span class="toggle-switch"></span>
+          </div>
+          <div class="layer-toggle on" id="toggle-parks">
+            <span class="layer-dot" style="background:#2E7D32;border-radius:2px;"></span>
+            <span class="layer-label">Protected Areas</span>
+            <span class="toggle-switch"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section: Reset -->
+      <div class="sidebar-section">
+        <button class="btn-sm btn-outline" id="btn-reset-filters" style="width:100%;">↺ Reset All Filters</button>
+      </div>
+
+    </aside><!-- /sidebar -->
+
+    <!-- ── MAP AREA ───────────────────────────────────── -->
+    <main class="map-wrap" role="main">
+
+      <!-- Loading overlay -->
+      <div id="map-loader"
+        style="position:absolute;inset:0;z-index:800;background:rgba(241,248,241,0.90);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;">
+        <div
+          style="width:40px;height:40px;border:3px solid rgba(46,125,50,0.20);border-top-color:#2E7D32;border-radius:50%;animation:spin 0.8s linear infinite;">
+        </div>
+        <span style="color:#2E7D32;font-size:12px;font-weight:600;">Loading boundary & fire data…</span>
+      </div>
+
+      <!-- Leaflet Map -->
+      <div id="map" aria-label="Zimbabwe Fire Monitoring Map"></div>
+
+      <!-- Basemap Switcher -->
+      <div class="basemap-switcher" role="group" aria-label="Basemap selector">
+        <button class="basemap-btn" data-base="dark">Dark</button>
+        <button class="basemap-btn active" data-base="dark" style="display:none"></button>
+        <button class="basemap-btn" data-base="osm">Street</button>
+        <button class="basemap-btn" data-base="satellite">Satellite</button>
+      </div>
+
+      <!-- Map Legend -->
+      <div class="map-legend" role="note" aria-label="Map legend">
+        <div class="legend-title">Map Legend</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#D32F2F;border:1.5px solid #B71C1C;"></span>
+          High Confidence Fire</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#F9A825;border:1.5px solid #E65100;"></span>
+          Low Confidence Fire</div>
+        <div class="legend-item"><span class="legend-rect"
+            style="background:rgba(230,74,25,0.50);border-color:#E64A19;"></span> Burn Scar</div>
+        <div class="legend-item"><span class="legend-rect"
+            style="background:rgba(46,125,50,0.14);border-color:#2E7D32;"></span> Protected Area</div>
+        <div class="legend-item"><span class="legend-rect"
+            style="background:rgba(21,101,192,0.07);border-color:#1565C0;"></span> Province Boundary</div>
+        <div class="legend-item"><span class="legend-rect"
+            style="background:rgba(92,107,192,0.05);border-color:#5C6BC0;"></span> District Boundary</div>
+        <div class="legend-item"><span class="legend-rect" style="background:rgba(149,117,205,0.05);border-color:#9575CD;"></span> Ward Boundary</div>
+      </div>
+
+      <!-- Time scrubber bar at bottom of map -->
+      <div class="time-scrubber" role="region" aria-label="Time controls">
+        <span class="scrubber-label">JUL 2025</span>
+        <div class="scrubber-track">
+          <input type="range" class="time-slider" id="map-time-slider" min="0" max="262" value="262"
+            aria-label="Fire season time slider" />
+        </div>
+        <span class="scrubber-label">MAR 2026</span>
+        <span class="scrubber-date" id="scrubber-date">20 Mar 2026</span>
+        <button class="btn-sm btn-primary" id="btn-play-slider" style="width:auto;padding:6px 14px;display:none;">▶
+          Play</button>
+      </div>
+
+    </main><!-- /map-wrap -->
+
+    <!-- ── RIGHT ANALYTICS PANEL ─────────────────────── -->
+    <aside class="analytics-panel" id="analytics-panel" role="complementary" aria-label="Analytics and Reporting">
+
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">📊 Analytics &amp; Reporting</div>
+          <div class="panel-subtitle">2025/2026 Fire Season — Zimbabwe</div>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="panel-tabs" role="tablist">
+        <button class="tab active" data-tab="overview" role="tab" aria-selected="true">Overview</button>
+        <button class="tab" data-tab="districts" role="tab">Districts</button>
+        <button class="tab" data-tab="alerts" role="tab">Alerts</button>
+      </div>
+
+      <!-- ── TAB: OVERVIEW ── -->
+      <div class="tab-content active" id="tab-overview" role="tabpanel">
+
+        <!-- Stat cards -->
+        <div class="stat-cards">
+          <div class="stat-card" id="stat-total">
+            <div class="stat-icon">🔥</div>
+            <div class="stat-value">—</div>
+            <div class="stat-label">Total Detections</div>
+            <div class="stat-delta delta-up">—</div>
+          </div>
+          <div class="stat-card" id="stat-high">
+            <div class="stat-icon">🎯</div>
+            <div class="stat-value">—</div>
+            <div class="stat-label">High Confidence</div>
+            <div class="stat-delta delta-up">—</div>
+          </div>
+          <div class="stat-card" id="stat-parks">
+            <div class="stat-icon">🌿</div>
+            <div class="stat-value">—</div>
+            <div class="stat-label">Parks Affected</div>
+            <div class="stat-delta delta-dn">—</div>
+          </div>
+          <div class="stat-card" id="stat-provinces">
+            <div class="stat-icon">📍</div>
+            <div class="stat-value">—</div>
+            <div class="stat-label">Provinces</div>
+            <div class="stat-delta">—</div>
+          </div>
+        </div>
+
+        <!-- Weekly fire count chart -->
+        <div class="chart-section">
+          <div class="chart-header">
+            <span class="chart-title">Weekly Fire Detections</span>
+            <span class="chart-badge">Time Series</span>
+          </div>
+          <div class="chart-box">
+            <canvas id="chart-weekly" height="130"></canvas>
+          </div>
+        </div>
+
+        <!-- Confidence breakdown -->
+        <div class="chart-section">
+          <div class="chart-header">
+            <span class="chart-title">Detection Confidence</span>
+            <span class="chart-badge">VIIRS + MODIS</span>
+          </div>
+          <div class="chart-box" style="max-height:180px; display:flex; align-items:center; justify-content:center;">
+            <canvas id="chart-confidence" height="150" style="max-width:200px;"></canvas>
+          </div>
+        </div>
+
+        <!-- Export buttons -->
+        <div class="export-row">
+          <button class="btn-export btn-export-pdf" id="btn-export-pdf">
+            📄 Export PDF
+          </button>
+          <button class="btn-export btn-export-csv" id="btn-export-csv">
+            📊 Export CSV
+          </button>
+        </div>
+
+      </div><!-- /tab-overview -->
+
+      <!-- ── TAB: DISTRICTS ── -->
+      <div class="tab-content" id="tab-districts" role="tabpanel">
+
+        <!-- Burned area by province chart -->
+        <div class="chart-section" style="padding-top:14px;">
+          <div class="chart-header">
+            <span class="chart-title">Burned Area by Province</span>
+            <span class="chart-badge">×1000 ha</span>
+          </div>
+          <div class="chart-box">
+            <canvas id="chart-burned" height="180"></canvas>
+          </div>
+        </div>
+
+        <!-- Hotspot Table -->
+        <div class="chart-section">
+          <div class="chart-header">
+            <span class="chart-title">Province Fire Hotspots</span>
+            <span class="chart-badge">Ranked</span>
+          </div>
+          <div class="chart-box" style="padding:8px; overflow-x:auto;">
+            <table class="district-table">
+              <thead>
+                <tr>
+                  <th>Province</th>
+                  <th>Fires</th>
+                  <th>High 🎯</th>
+                  <th>Severity</th>
+                </tr>
+              </thead>
+              <tbody id="hotspot-table-body">
+                <tr>
+                  <td colspan="4" style="text-align:center;color:#475569;padding:16px;">Loading…</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Export buttons -->
+        <div class="export-row">
+          <button class="btn-export btn-export-pdf"
+            onclick="showToast('PDF Export','Report generation triggered','info')">
+            📄 Export PDF
+          </button>
+          <button class="btn-export btn-export-csv" id="btn-export-csv-2" onclick="ChartsModule.exportCSV()">
+            📊 Export CSV
+          </button>
+        </div>
+
+      </div><!-- /tab-districts -->
+
+      <!-- ── TAB: ALERTS ── -->
+      <div class="tab-content" id="tab-alerts" role="tabpanel">
+        <div style="padding:12px 16px 8px;">
+          <button class="btn-sm btn-primary" id="btn-new-alert" style="width:100%;padding:10px;font-size:12px;">
+            + Configure New Alert
+          </button>
+        </div>
+
+        <div style="padding:0 16px 8px;font-size:10px;color:#475569;">
+          Alerts trigger SMS, Email, or Webhooks when fire rules are met.
+        </div>
+
+        <!-- Alerts table -->
+        <div class="chart-section">
+          <div class="chart-box" style="padding:8px;overflow-x:auto;max-height:340px;overflow-y:auto;">
+            <table class="district-table" style="min-width:280px;">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Channels</th>
+                  <th>Rules</th>
+                  <th>Status</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="alerts-list">
+                <tr>
+                  <td><b>Hwange NP Watch</b></td>
+                  <td><span
+                      style="font-size:10px;padding:2px 6px;border-radius:6px;background:rgba(59,130,246,0.15);color:#60a5fa;">SMS</span>
+                    <span
+                      style="font-size:10px;padding:2px 6px;border-radius:6px;background:rgba(59,130,246,0.15);color:#60a5fa;">Email</span>
+                  </td>
+                  <td style="font-size:10px;color:#94a3b8;">Fire &gt; 200 ha<br>Park boundary</td>
+                  <td><span
+                      style="font-size:10px;padding:2px 8px;border-radius:8px;background:rgba(34,197,94,0.15);color:#22c55e;">Active</span>
+                  </td>
+                  <td><button onclick="this.closest('tr').remove();"
+                      style="background:none;border:none;color:#475569;cursor:pointer;font-size:14px;">🗑</button></td>
+                </tr>
+                <tr>
+                  <td><b>Gonarezhou Alert</b></td>
+                  <td><span
+                      style="font-size:10px;padding:2px 6px;border-radius:6px;background:rgba(59,130,246,0.15);color:#60a5fa;">Webhook</span>
+                  </td>
+                  <td style="font-size:10px;color:#94a3b8;">FRP &gt; 80 MW<br>High confidence</td>
+                  <td><span
+                      style="font-size:10px;padding:2px 8px;border-radius:8px;background:rgba(34,197,94,0.15);color:#22c55e;">Active</span>
+                  </td>
+                  <td><button onclick="this.closest('tr').remove();"
+                      style="background:none;border:none;color:#475569;cursor:pointer;font-size:14px;">🗑</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div><!-- /tab-alerts -->
+
+    </aside><!-- /analytics-panel -->
+
+  </div><!-- /app-layout -->
+
+  <!-- ══════════════════════════════════════════════════
+     ALERT CONFIGURATION MODAL
+══════════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="alert-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-title" id="modal-title">🔔 Configure Fire Alert</div>
+        <button class="modal-close" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body">
+
+        <!-- Alert name -->
+        <div class="form-group">
+          <label class="form-label" for="alert-name">Alert Name</label>
+          <input type="text" class="form-control" id="alert-name"
+            placeholder="e.g. Hwange Park High-Confidence Alert" />
+        </div>
+
+        <!-- Notification channels -->
+        <div class="form-group">
+          <label class="form-label">Notification Channels</label>
+          <div class="channel-group">
+            <button class="channel-btn active" type="button">📱 SMS</button>
+            <button class="channel-btn" type="button">📧 Email</button>
+            <button class="channel-btn" type="button">🔗 Webhook</button>
+          </div>
+        </div>
+
+        <!-- SMS recipient -->
+        <div class="form-group">
+          <label class="form-label" for="alert-sms">SMS Recipient Number</label>
+          <input type="text" class="form-control" id="alert-sms" placeholder="+263 77 123 4567" />
+        </div>
+
+        <!-- Email recipient -->
+        <div class="form-group">
+          <label class="form-label" for="alert-email">Email Address</label>
+          <input type="email" class="form-control" id="alert-email" placeholder="dutyofficer@ema.gov.zw" />
+        </div>
+
+        <!-- Webhook URL -->
+        <div class="form-group">
+          <label class="form-label" for="alert-webhook">Webhook URL</label>
+          <input type="url" class="form-control" id="alert-webhook"
+            placeholder="https://hooks.example.com/fire-alert" />
+        </div>
+
+        <!-- Rule builder -->
+        <div class="form-group">
+          <label class="form-label">Trigger Rules</label>
+
+          <div class="rule-row">
+            <span class="rule-icon">📐</span>
+            <span class="rule-text">Fire size exceeds <strong>
+                <input class="rule-input-sm" id="rule-size" type="number" value="500" min="1" /> ha
+              </strong></span>
+          </div>
+
+          <div class="rule-row">
+            <span class="rule-icon">📡</span>
+            <span class="rule-text">Within <strong>
+                <input class="rule-input-sm" id="rule-buffer" type="number" value="10" min="1" /> km
+              </strong> of infrastructure</span>
+          </div>
+
+          <div class="rule-row">
+            <span class="rule-icon">🌿</span>
+            <span class="rule-text" style="flex:1;">New fire within a protected area</span>
+            <label class="checkbox-item" style="margin:0;">
+              <input type="checkbox" id="rule-park-only" checked />
+              <span class="checkbox-box"></span>
+            </label>
+          </div>
+
+          <div class="rule-row">
+            <span class="rule-icon">🎯</span>
+            <span class="rule-text" style="flex:1;">High confidence detections only</span>
+            <label class="checkbox-item" style="margin:0;">
+              <input type="checkbox" id="rule-high-only" checked />
+              <span class="checkbox-box"></span>
+            </label>
+          </div>
+        </div>
+
+      </div><!-- /modal-body -->
+      <div class="modal-footer">
+        <button class="btn-lg btn-ghost" id="btn-alert-cancel">Cancel</button>
+        <button class="btn-lg btn-primary" id="btn-alert-save">💾 Save Alert</button>
+      </div>
+    </div>
+  </div><!-- /modal -->
+
+  <!-- ══════════════════════════════════════════════════
+     TOAST CONTAINER
+══════════════════════════════════════════════════ -->
+  <div id="toast-container" class="toast-container" role="status" aria-live="polite"></div>
+
+  <!-- ══════════════════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════════════════ -->
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+
+  <!-- Spin animation -->
+  <style>
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+
+  <!-- App modules (order matters) -->
+  <script src="js/map.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/alerts.js"></script>
+  <script src="js/timeslider.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- Basemap switcher inline fix (3 visible buttons via JS) -->
+  <script>
+    // Override basemap switcher with EMA-branded labels
+    document.addEventListener('DOMContentLoaded', () => {
+      const switcher = document.querySelector('.basemap-switcher');
+      if (switcher) {
+        switcher.innerHTML = `
+        <button class="basemap-btn active" data-base="light">Light</button>
+        <button class="basemap-btn" data-base="osm">Street</button>
+        <button class="basemap-btn" data-base="satellite">Satellite</button>
+      `;
+        switcher.querySelectorAll('.basemap-btn').forEach(btn => {
+          btn.addEventListener('click', () => switchBasemap(btn.dataset.base));
+        });
+      }
+    });
+  </script>
+
+</body>
+
+</html>
