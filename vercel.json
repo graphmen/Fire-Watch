@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "name": "zim-fire-watch",
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/data/(.*)\\.geojson",
+      "headers": [
+        { "key": "Content-Type", "value": "application/geo+json" },
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    }
+  ]
+}
