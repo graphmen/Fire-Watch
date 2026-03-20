@@ -62,7 +62,13 @@ var firePointsWithProvinces = firePoints.map(function(feature) {
     ee.Algorithms.If(ee.String(confRaw).equals('H'), 'high', 
       ee.Algorithms.If(ee.String(confRaw).equals('L'), 'low', 'nominal')),
     // If it's a number (0-2 for VIIRS, 0-100 for MODIS)
-    ee.Algorithms.If(satellite.contains('VIIRS'),
+    // Robust check for VIIRS platforms (Suomi NPP, NOAA-20, NOAA-21)
+    ee.Algorithms.If(
+      ee.Filter.or(
+        ee.Filter.stringContains('satellite', 'VIIRS'),
+        ee.Filter.stringContains('satellite', 'Suomi'),
+        ee.Filter.stringContains('satellite', 'NOAA')
+      ).apply(feature),
       ee.Algorithms.If(ee.Number(confRaw).eq(2), 'high', 
         ee.Algorithms.If(ee.Number(confRaw).eq(0), 'low', 'nominal')),
       ee.Algorithms.If(ee.Number(confRaw).gte(80), 'high',
