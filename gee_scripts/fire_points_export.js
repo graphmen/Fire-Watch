@@ -49,36 +49,10 @@ var firePointsWithProvinces = firePoints.map(function(feature) {
   var parentProv = provinces.filterBounds(point).first();
   var provName = ee.String(ee.Algorithms.If(parentProv, parentProv.get('ADM1_NAME'), 'UNKNOWN'));
   
-  // Capture properties from the GEE image
-  var confRaw = feature.get('confidence'); 
-  var satellite = ee.String(feature.get('satellite'));
-  
-  // Use ee.Algorithms.ObjectType to safely check type on server-side
-  var confType = ee.Algorithms.ObjectType(confRaw);
-  
-  var confStr = ee.String(ee.Algorithms.If(
-    ee.Algorithms.IsEqual(confType, 'String'),
-    // If it's a string (H/N/L)
-    ee.Algorithms.If(ee.String(confRaw).equals('H'), 'high', 
-      ee.Algorithms.If(ee.String(confRaw).equals('L'), 'low', 'nominal')),
-    // If it's a number (0-2 for VIIRS, 0-100 for MODIS)
-    // Robust check for VIIRS platforms (Suomi NPP, NOAA-20, NOAA-21)
-    ee.Algorithms.If(
-      ee.Filter.or(
-        ee.Filter.stringContains('satellite', 'VIIRS'),
-        ee.Filter.stringContains('satellite', 'Suomi'),
-        ee.Filter.stringContains('satellite', 'NOAA')
-      ).apply(feature),
-      ee.Algorithms.If(ee.Number(confRaw).eq(2), 'high', 
-        ee.Algorithms.If(ee.Number(confRaw).eq(0), 'low', 'nominal')),
-      ee.Algorithms.If(ee.Number(confRaw).gte(80), 'high',
-        ee.Algorithms.If(ee.Number(confRaw).lt(40), 'low', 'nominal'))
-    )
-  ));
-
+  // Assign simple properties. We will handle the normalization in the dashboard filters if needed.
   return ee.Feature(point, {
     'province': provName,
-    'confidence': confStr,
+    'confidence': feature.get('confidence'),
     'datetime': ee.Date(feature.get('system:time_start')).format("YYYY-MM-dd'T'HH:mm:ss'Z'"),
     'satellite': feature.get('satellite'),
     'frp': feature.get('frp')
