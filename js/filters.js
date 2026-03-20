@@ -59,7 +59,20 @@ function filterFires() {
     const end   = new Date(_filterState.endDate + 'T23:59:59Z');
 
     if (dt < start || dt > end) return false;
-    if (!_filterState.confidence.includes(p.confidence)) return false;
+
+    // Handle Confidence Filter with raw value normalization
+    const conf = (p.confidence || '').toString().toLowerCase();
+    let normalizedConf = 'nominal'; // Default for anything not high/low
+
+    // Handle raw FIRMS values (H/N/L) or numeric (0-100)
+    if (conf === 'high' || conf === 'h' || (parseInt(conf) >= 80)) {
+      normalizedConf = 'high';
+    } else if (conf === 'low' || conf === 'l' || (parseInt(conf) > 0 && parseInt(conf) <= 30)) {
+      normalizedConf = 'low';
+    }
+
+    if (!_filterState.confidence.includes(normalizedConf)) return false;
+
     if (_filterState.province !== 'all') {
       const p1 = (p.province || '').toUpperCase();
       const p2 = _filterState.province.toUpperCase();
