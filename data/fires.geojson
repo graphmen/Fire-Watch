@@ -1,1 +1,1059 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[27.3452,-20.8822]},"properties":{"id":"F001","datetime":"2025-08-22T07:37:00Z","confidence":"low","satellite":"MODIS","frp":31.5,"province":"Matabeleland North","landcover":"Savanna Woodland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.9054,-18.9636]},"properties":{"id":"F002","datetime":"2025-07-14T14:26:00Z","confidence":"high","satellite":"VIIRS","frp":101.7,"province":"Masvingo","landcover":"Rocky Outcrops","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.4854,-17.6527]},"properties":{"id":"F003","datetime":"2025-12-22T11:06:00Z","confidence":"high","satellite":"VIIRS","frp":34.1,"province":"Manicaland","landcover":"Savanna Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.8105,-18.2947]},"properties":{"id":"F004","datetime":"2025-07-23T12:05:00Z","confidence":"low","satellite":"MODIS","frp":20.2,"province":"Bulawayo","landcover":"Cropland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.7033,-17.6089]},"properties":{"id":"F005","datetime":"2025-07-24T07:54:00Z","confidence":"low","satellite":"VIIRS","frp":27.7,"province":"Matabeleland South","landcover":"Grassland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.7366,-16.728]},"properties":{"id":"F006","datetime":"2025-09-22T10:44:00Z","confidence":"high","satellite":"VIIRS","frp":33.3,"province":"Bulawayo","landcover":"Riverine Forest","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.8056,-20.5644]},"properties":{"id":"F007","datetime":"2025-10-21T06:14:00Z","confidence":"low","satellite":"VIIRS","frp":30.0,"province":"Mashonaland East","landcover":"Grassland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.624,-17.5182]},"properties":{"id":"F008","datetime":"2025-10-17T13:09:00Z","confidence":"low","satellite":"MODIS","frp":15.7,"province":"Midlands","landcover":"Miombo Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.404,-17.3203]},"properties":{"id":"F009","datetime":"2026-02-05T09:08:00Z","confidence":"low","satellite":"MODIS","frp":15.8,"province":"Matabeleland South","landcover":"Cropland","near_park":"Hwange NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.4479,-17.7727]},"properties":{"id":"F010","datetime":"2025-08-02T13:33:00Z","confidence":"high","satellite":"MODIS","frp":85.4,"province":"Harare","landcover":"Cropland","near_park":"Hwange NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[32.1013,-17.294]},"properties":{"id":"F011","datetime":"2025-12-22T13:00:00Z","confidence":"high","satellite":"MODIS","frp":63.7,"province":"Harare","landcover":"Cropland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[30.0773,-16.6766]},"properties":{"id":"F012","datetime":"2026-03-17T08:34:00Z","confidence":"high","satellite":"VIIRS","frp":25.6,"province":"Bulawayo","landcover":"Mopane Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.9072,-18.6613]},"properties":{"id":"F013","datetime":"2025-11-13T09:59:00Z","confidence":"high","satellite":"VIIRS","frp":86.9,"province":"Mashonaland Central","landcover":"Grassland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.6172,-18.8805]},"properties":{"id":"F014","datetime":"2025-08-31T06:37:00Z","confidence":"high","satellite":"VIIRS","frp":13.6,"province":"Bulawayo","landcover":"Miombo Woodland","near_park":"Hwange NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.7537,-18.1085]},"properties":{"id":"F015","datetime":"2025-10-26T11:04:00Z","confidence":"high","satellite":"VIIRS","frp":9.2,"province":"Mashonaland Central","landcover":"Riverine Forest","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.871,-21.5003]},"properties":{"id":"F016","datetime":"2026-02-28T12:12:00Z","confidence":"high","satellite":"VIIRS","frp":68.9,"province":"Matabeleland South","landcover":"Riverine Forest","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.9635,-19.6045]},"properties":{"id":"F017","datetime":"2025-07-28T07:03:00Z","confidence":"low","satellite":"MODIS","frp":34.5,"province":"Mashonaland East","landcover":"Cropland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.1395,-21.1066]},"properties":{"id":"F018","datetime":"2026-02-15T13:15:00Z","confidence":"high","satellite":"VIIRS","frp":29.8,"province":"Masvingo","landcover":"Cropland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.9637,-17.9654]},"properties":{"id":"F019","datetime":"2025-07-08T09:10:00Z","confidence":"low","satellite":"MODIS","frp":32.6,"province":"Masvingo","landcover":"Grassland","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.2453,-16.0997]},"properties":{"id":"F020","datetime":"2026-02-18T14:42:00Z","confidence":"high","satellite":"MODIS","frp":99.0,"province":"Midlands","landcover":"Miombo Woodland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.919,-16.1482]},"properties":{"id":"F021","datetime":"2025-09-19T08:04:00Z","confidence":"high","satellite":"VIIRS","frp":73.6,"province":"Mashonaland West","landcover":"Grassland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[32.5444,-18.5262]},"properties":{"id":"F022","datetime":"2025-07-21T14:20:00Z","confidence":"high","satellite":"MODIS","frp":61.6,"province":"Mashonaland West","landcover":"Riverine Forest","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.0618,-19.7087]},"properties":{"id":"F023","datetime":"2025-12-01T07:00:00Z","confidence":"high","satellite":"MODIS","frp":130.4,"province":"Bulawayo","landcover":"Rocky Outcrops","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.7714,-20.9506]},"properties":{"id":"F024","datetime":"2025-11-13T07:56:00Z","confidence":"high","satellite":"VIIRS","frp":52.1,"province":"Mashonaland East","landcover":"Mopane Woodland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.6178,-18.7061]},"properties":{"id":"F025","datetime":"2025-12-02T14:00:00Z","confidence":"high","satellite":"MODIS","frp":138.3,"province":"Matabeleland South","landcover":"Miombo Woodland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.1003,-21.6722]},"properties":{"id":"F026","datetime":"2025-09-18T11:13:00Z","confidence":"high","satellite":"MODIS","frp":86.7,"province":"Harare","landcover":"Grassland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.2147,-18.0676]},"properties":{"id":"F027","datetime":"2025-11-12T12:35:00Z","confidence":"high","satellite":"VIIRS","frp":64.6,"province":"Matabeleland South","landcover":"Savanna Woodland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.4556,-16.7248]},"properties":{"id":"F028","datetime":"2025-09-14T11:57:00Z","confidence":"high","satellite":"VIIRS","frp":10.6,"province":"Mashonaland East","landcover":"Miombo Woodland","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.5671,-16.452]},"properties":{"id":"F029","datetime":"2025-09-18T08:51:00Z","confidence":"low","satellite":"VIIRS","frp":10.6,"province":"Manicaland","landcover":"Savanna Woodland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.2811,-17.0459]},"properties":{"id":"F030","datetime":"2025-08-25T13:14:00Z","confidence":"high","satellite":"VIIRS","frp":10.2,"province":"Masvingo","landcover":"Mopane Woodland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.9388,-17.9118]},"properties":{"id":"F031","datetime":"2026-01-21T10:22:00Z","confidence":"high","satellite":"MODIS","frp":121.7,"province":"Harare","landcover":"Mopane Woodland","near_park":"Hwange NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.5896,-17.4459]},"properties":{"id":"F032","datetime":"2025-12-08T07:24:00Z","confidence":"high","satellite":"VIIRS","frp":137.9,"province":"Mashonaland Central","landcover":"Savanna Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.3999,-17.5079]},"properties":{"id":"F033","datetime":"2025-10-09T11:39:00Z","confidence":"high","satellite":"MODIS","frp":14.4,"province":"Matabeleland South","landcover":"Riverine Forest","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.1556,-17.8651]},"properties":{"id":"F034","datetime":"2025-12-15T08:12:00Z","confidence":"high","satellite":"MODIS","frp":44.9,"province":"Manicaland","landcover":"Riverine Forest","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.4379,-19.4768]},"properties":{"id":"F035","datetime":"2025-12-12T09:32:00Z","confidence":"high","satellite":"MODIS","frp":64.7,"province":"Midlands","landcover":"Riverine Forest","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.4135,-17.8858]},"properties":{"id":"F036","datetime":"2025-12-19T09:43:00Z","confidence":"high","satellite":"MODIS","frp":133.5,"province":"Mashonaland West","landcover":"Cropland","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[32.8747,-18.2433]},"properties":{"id":"F037","datetime":"2025-08-07T09:45:00Z","confidence":"high","satellite":"MODIS","frp":124.6,"province":"Masvingo","landcover":"Grassland","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.3511,-17.7242]},"properties":{"id":"F038","datetime":"2025-08-24T14:29:00Z","confidence":"low","satellite":"VIIRS","frp":10.0,"province":"Harare","landcover":"Miombo Woodland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.7604,-16.9504]},"properties":{"id":"F039","datetime":"2025-12-10T14:27:00Z","confidence":"low","satellite":"MODIS","frp":31.5,"province":"Midlands","landcover":"Riverine Forest","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.7105,-17.2879]},"properties":{"id":"F040","datetime":"2025-11-19T09:17:00Z","confidence":"low","satellite":"MODIS","frp":19.7,"province":"Matabeleland South","landcover":"Riverine Forest","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.029,-20.1162]},"properties":{"id":"F041","datetime":"2025-08-11T08:45:00Z","confidence":"high","satellite":"VIIRS","frp":36.2,"province":"Matabeleland South","landcover":"Grassland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.7809,-19.2317]},"properties":{"id":"F042","datetime":"2025-08-01T06:54:00Z","confidence":"high","satellite":"MODIS","frp":61.7,"province":"Masvingo","landcover":"Savanna Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.5292,-19.7481]},"properties":{"id":"F043","datetime":"2026-01-31T09:31:00Z","confidence":"high","satellite":"VIIRS","frp":104.2,"province":"Mashonaland Central","landcover":"Grassland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.4264,-20.1143]},"properties":{"id":"F044","datetime":"2026-01-24T08:39:00Z","confidence":"low","satellite":"VIIRS","frp":29.9,"province":"Manicaland","landcover":"Rocky Outcrops","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.5432,-16.5054]},"properties":{"id":"F045","datetime":"2025-10-02T09:29:00Z","confidence":"high","satellite":"MODIS","frp":56.2,"province":"Mashonaland East","landcover":"Cropland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.3704,-15.9318]},"properties":{"id":"F046","datetime":"2026-02-01T06:47:00Z","confidence":"high","satellite":"VIIRS","frp":16.1,"province":"Mashonaland East","landcover":"Miombo Woodland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.2936,-17.9681]},"properties":{"id":"F047","datetime":"2025-07-16T06:39:00Z","confidence":"low","satellite":"VIIRS","frp":9.4,"province":"Mashonaland West","landcover":"Miombo Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[30.4218,-18.565]},"properties":{"id":"F048","datetime":"2025-10-20T11:10:00Z","confidence":"high","satellite":"VIIRS","frp":39.6,"province":"Midlands","landcover":"Mopane Woodland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.7137,-16.0836]},"properties":{"id":"F049","datetime":"2026-01-09T07:37:00Z","confidence":"high","satellite":"VIIRS","frp":101.5,"province":"Matabeleland South","landcover":"Riverine Forest","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.8323,-18.3172]},"properties":{"id":"F050","datetime":"2025-08-31T06:22:00Z","confidence":"low","satellite":"MODIS","frp":21.1,"province":"Mashonaland East","landcover":"Savanna Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.4765,-19.0666]},"properties":{"id":"F051","datetime":"2026-02-07T13:45:00Z","confidence":"low","satellite":"VIIRS","frp":23.3,"province":"Manicaland","landcover":"Miombo Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.504,-18.7404]},"properties":{"id":"F052","datetime":"2026-03-05T10:20:00Z","confidence":"high","satellite":"VIIRS","frp":116.5,"province":"Matabeleland South","landcover":"Mopane Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.1021,-19.24]},"properties":{"id":"F053","datetime":"2026-01-11T11:11:00Z","confidence":"high","satellite":"MODIS","frp":71.7,"province":"Mashonaland West","landcover":"Mopane Woodland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.8546,-16.4138]},"properties":{"id":"F054","datetime":"2025-11-19T09:05:00Z","confidence":"high","satellite":"VIIRS","frp":74.7,"province":"Manicaland","landcover":"Grassland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.1137,-17.7039]},"properties":{"id":"F055","datetime":"2026-03-09T10:14:00Z","confidence":"high","satellite":"MODIS","frp":7.3,"province":"Mashonaland West","landcover":"Mopane Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.0784,-18.6364]},"properties":{"id":"F056","datetime":"2025-12-24T11:22:00Z","confidence":"high","satellite":"MODIS","frp":105.7,"province":"Mashonaland Central","landcover":"Mopane Woodland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.9982,-17.4953]},"properties":{"id":"F057","datetime":"2025-12-09T08:12:00Z","confidence":"high","satellite":"VIIRS","frp":77.3,"province":"Masvingo","landcover":"Mopane Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[32.8175,-18.8325]},"properties":{"id":"F058","datetime":"2025-11-22T10:14:00Z","confidence":"low","satellite":"MODIS","frp":29.6,"province":"Midlands","landcover":"Mopane Woodland","near_park":"Hwange NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.4787,-15.9802]},"properties":{"id":"F059","datetime":"2026-03-09T10:30:00Z","confidence":"high","satellite":"MODIS","frp":6.7,"province":"Masvingo","landcover":"Mopane Woodland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.7008,-17.7321]},"properties":{"id":"F060","datetime":"2025-09-16T10:05:00Z","confidence":"high","satellite":"VIIRS","frp":81.0,"province":"Matabeleland South","landcover":"Rocky Outcrops","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.9293,-17.023]},"properties":{"id":"F061","datetime":"2025-10-24T13:19:00Z","confidence":"low","satellite":"MODIS","frp":15.2,"province":"Mashonaland Central","landcover":"Rocky Outcrops","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.974,-17.2134]},"properties":{"id":"F062","datetime":"2025-10-17T09:11:00Z","confidence":"high","satellite":"VIIRS","frp":16.0,"province":"Midlands","landcover":"Savanna Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.7139,-18.3621]},"properties":{"id":"F063","datetime":"2025-11-27T10:44:00Z","confidence":"high","satellite":"MODIS","frp":43.9,"province":"Matabeleland South","landcover":"Riverine Forest","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[32.4065,-17.0428]},"properties":{"id":"F064","datetime":"2025-10-10T08:58:00Z","confidence":"high","satellite":"MODIS","frp":78.5,"province":"Midlands","landcover":"Savanna Woodland","near_park":"Hwange NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.4942,-20.3082]},"properties":{"id":"F065","datetime":"2025-11-25T10:44:00Z","confidence":"high","satellite":"MODIS","frp":68.3,"province":"Mashonaland Central","landcover":"Rocky Outcrops","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.7141,-20.6975]},"properties":{"id":"F066","datetime":"2025-08-16T06:48:00Z","confidence":"high","satellite":"MODIS","frp":96.0,"province":"Bulawayo","landcover":"Savanna Woodland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.8699,-17.9697]},"properties":{"id":"F067","datetime":"2025-11-20T13:05:00Z","confidence":"high","satellite":"MODIS","frp":84.0,"province":"Mashonaland East","landcover":"Grassland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.4544,-19.6008]},"properties":{"id":"F068","datetime":"2026-03-11T14:02:00Z","confidence":"high","satellite":"MODIS","frp":132.6,"province":"Matabeleland South","landcover":"Mopane Woodland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.7215,-15.8027]},"properties":{"id":"F069","datetime":"2026-01-23T06:42:00Z","confidence":"low","satellite":"MODIS","frp":29.4,"province":"Manicaland","landcover":"Savanna Woodland","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.2438,-18.1661]},"properties":{"id":"F070","datetime":"2026-03-13T09:17:00Z","confidence":"high","satellite":"VIIRS","frp":107.6,"province":"Mashonaland Central","landcover":"Grassland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.4353,-18.6543]},"properties":{"id":"F071","datetime":"2026-01-25T07:29:00Z","confidence":"high","satellite":"VIIRS","frp":139.0,"province":"Midlands","landcover":"Grassland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.1011,-18.6514]},"properties":{"id":"F072","datetime":"2026-01-13T08:55:00Z","confidence":"high","satellite":"VIIRS","frp":85.9,"province":"Mashonaland Central","landcover":"Cropland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.851,-17.0435]},"properties":{"id":"F073","datetime":"2025-11-14T10:53:00Z","confidence":"low","satellite":"MODIS","frp":12.1,"province":"Midlands","landcover":"Grassland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.9779,-20.1394]},"properties":{"id":"F074","datetime":"2026-01-10T09:44:00Z","confidence":"high","satellite":"VIIRS","frp":48.4,"province":"Bulawayo","landcover":"Grassland","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.8769,-19.6067]},"properties":{"id":"F075","datetime":"2025-12-10T12:24:00Z","confidence":"low","satellite":"VIIRS","frp":25.6,"province":"Masvingo","landcover":"Savanna Woodland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.1179,-18.3868]},"properties":{"id":"F076","datetime":"2025-08-21T14:58:00Z","confidence":"low","satellite":"MODIS","frp":17.1,"province":"Matabeleland North","landcover":"Riverine Forest","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.3978,-17.9475]},"properties":{"id":"F077","datetime":"2025-09-18T10:21:00Z","confidence":"high","satellite":"MODIS","frp":110.5,"province":"Matabeleland South","landcover":"Cropland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.1641,-20.2467]},"properties":{"id":"F078","datetime":"2026-03-07T07:15:00Z","confidence":"low","satellite":"MODIS","frp":4.1,"province":"Mashonaland West","landcover":"Riverine Forest","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[30.1432,-16.4665]},"properties":{"id":"F079","datetime":"2026-02-13T06:02:00Z","confidence":"high","satellite":"MODIS","frp":45.4,"province":"Matabeleland North","landcover":"Mopane Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.3431,-18.5517]},"properties":{"id":"F080","datetime":"2025-10-01T12:39:00Z","confidence":"high","satellite":"VIIRS","frp":15.7,"province":"Masvingo","landcover":"Rocky Outcrops","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.0111,-18.0622]},"properties":{"id":"F081","datetime":"2026-02-21T13:57:00Z","confidence":"high","satellite":"MODIS","frp":6.3,"province":"Harare","landcover":"Miombo Woodland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.6455,-20.0502]},"properties":{"id":"F082","datetime":"2025-12-01T10:29:00Z","confidence":"high","satellite":"MODIS","frp":62.3,"province":"Mashonaland West","landcover":"Grassland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.9999,-20.3881]},"properties":{"id":"F083","datetime":"2025-11-29T12:17:00Z","confidence":"high","satellite":"VIIRS","frp":117.1,"province":"Bulawayo","landcover":"Cropland","near_park":"Hwange NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[32.3028,-17.3328]},"properties":{"id":"F084","datetime":"2025-11-24T11:14:00Z","confidence":"low","satellite":"VIIRS","frp":10.4,"province":"Bulawayo","landcover":"Mopane Woodland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[30.1003,-16.2569]},"properties":{"id":"F085","datetime":"2025-07-21T11:46:00Z","confidence":"high","satellite":"VIIRS","frp":64.5,"province":"Matabeleland South","landcover":"Mopane Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.2308,-18.732]},"properties":{"id":"F086","datetime":"2026-01-04T08:16:00Z","confidence":"high","satellite":"MODIS","frp":128.3,"province":"Mashonaland Central","landcover":"Riverine Forest","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.473,-19.2153]},"properties":{"id":"F087","datetime":"2025-08-08T12:54:00Z","confidence":"high","satellite":"MODIS","frp":135.5,"province":"Matabeleland South","landcover":"Cropland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.7473,-17.8248]},"properties":{"id":"F088","datetime":"2025-11-12T11:06:00Z","confidence":"high","satellite":"VIIRS","frp":116.0,"province":"Masvingo","landcover":"Savanna Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[32.097,-18.5824]},"properties":{"id":"F089","datetime":"2025-10-22T13:58:00Z","confidence":"high","satellite":"MODIS","frp":90.8,"province":"Manicaland","landcover":"Savanna Woodland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.0314,-18.7447]},"properties":{"id":"F090","datetime":"2026-01-15T14:26:00Z","confidence":"high","satellite":"VIIRS","frp":95.5,"province":"Manicaland","landcover":"Riverine Forest","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.7028,-18.2136]},"properties":{"id":"F091","datetime":"2025-11-21T13:28:00Z","confidence":"high","satellite":"VIIRS","frp":55.0,"province":"Mashonaland East","landcover":"Savanna Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.4468,-15.7507]},"properties":{"id":"F092","datetime":"2025-12-31T07:54:00Z","confidence":"high","satellite":"MODIS","frp":42.2,"province":"Matabeleland South","landcover":"Riverine Forest","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[30.2053,-18.3394]},"properties":{"id":"F093","datetime":"2025-07-11T08:50:00Z","confidence":"high","satellite":"VIIRS","frp":50.0,"province":"Matabeleland South","landcover":"Cropland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.8158,-20.9315]},"properties":{"id":"F094","datetime":"2025-10-28T06:17:00Z","confidence":"high","satellite":"VIIRS","frp":24.9,"province":"Midlands","landcover":"Rocky Outcrops","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.9943,-17.0387]},"properties":{"id":"F095","datetime":"2025-12-13T08:47:00Z","confidence":"high","satellite":"MODIS","frp":40.8,"province":"Harare","landcover":"Savanna Woodland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.9147,-17.1095]},"properties":{"id":"F096","datetime":"2026-03-20T09:39:00Z","confidence":"high","satellite":"VIIRS","frp":66.0,"province":"Harare","landcover":"Mopane Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[30.7567,-19.3838]},"properties":{"id":"F097","datetime":"2025-08-11T08:17:00Z","confidence":"high","satellite":"MODIS","frp":25.0,"province":"Manicaland","landcover":"Rocky Outcrops","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.5002,-18.9623]},"properties":{"id":"F098","datetime":"2026-02-06T14:46:00Z","confidence":"high","satellite":"VIIRS","frp":99.7,"province":"Manicaland","landcover":"Grassland","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.4277,-16.7735]},"properties":{"id":"F099","datetime":"2026-01-21T12:20:00Z","confidence":"high","satellite":"MODIS","frp":17.8,"province":"Mashonaland East","landcover":"Miombo Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[30.9626,-16.88]},"properties":{"id":"F100","datetime":"2025-07-31T11:42:00Z","confidence":"high","satellite":"VIIRS","frp":80.8,"province":"Manicaland","landcover":"Mopane Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.9711,-17.4968]},"properties":{"id":"F101","datetime":"2025-11-25T14:13:00Z","confidence":"high","satellite":"VIIRS","frp":52.5,"province":"Masvingo","landcover":"Miombo Woodland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.9309,-18.6174]},"properties":{"id":"F102","datetime":"2025-08-28T12:54:00Z","confidence":"low","satellite":"VIIRS","frp":21.4,"province":"Bulawayo","landcover":"Riverine Forest","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.4258,-20.5418]},"properties":{"id":"F103","datetime":"2025-12-06T08:55:00Z","confidence":"low","satellite":"VIIRS","frp":14.2,"province":"Bulawayo","landcover":"Riverine Forest","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.7428,-17.3614]},"properties":{"id":"F104","datetime":"2025-07-16T12:26:00Z","confidence":"high","satellite":"MODIS","frp":76.6,"province":"Mashonaland East","landcover":"Miombo Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.6308,-20.1942]},"properties":{"id":"F105","datetime":"2025-08-13T06:43:00Z","confidence":"low","satellite":"VIIRS","frp":8.0,"province":"Mashonaland Central","landcover":"Grassland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.9882,-19.3941]},"properties":{"id":"F106","datetime":"2025-11-17T11:27:00Z","confidence":"high","satellite":"VIIRS","frp":74.2,"province":"Mashonaland Central","landcover":"Riverine Forest","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.9957,-17.8635]},"properties":{"id":"F107","datetime":"2025-07-24T06:00:00Z","confidence":"high","satellite":"VIIRS","frp":137.9,"province":"Mashonaland Central","landcover":"Miombo Woodland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.1359,-19.0178]},"properties":{"id":"F108","datetime":"2026-02-06T09:32:00Z","confidence":"high","satellite":"MODIS","frp":56.3,"province":"Matabeleland South","landcover":"Grassland","near_park":"Hwange NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.6025,-19.2737]},"properties":{"id":"F109","datetime":"2025-08-09T12:45:00Z","confidence":"low","satellite":"MODIS","frp":21.4,"province":"Mashonaland Central","landcover":"Savanna Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.3627,-20.1916]},"properties":{"id":"F110","datetime":"2026-02-21T07:27:00Z","confidence":"low","satellite":"VIIRS","frp":32.4,"province":"Mashonaland West","landcover":"Grassland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.9901,-17.3285]},"properties":{"id":"F111","datetime":"2025-10-22T14:40:00Z","confidence":"high","satellite":"VIIRS","frp":27.7,"province":"Harare","landcover":"Rocky Outcrops","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[30.8736,-16.8311]},"properties":{"id":"F112","datetime":"2025-09-14T09:11:00Z","confidence":"high","satellite":"VIIRS","frp":24.8,"province":"Matabeleland South","landcover":"Miombo Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.8188,-18.5666]},"properties":{"id":"F113","datetime":"2026-02-15T11:55:00Z","confidence":"low","satellite":"MODIS","frp":31.2,"province":"Midlands","landcover":"Grassland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.8576,-18.1066]},"properties":{"id":"F114","datetime":"2025-11-18T07:19:00Z","confidence":"high","satellite":"MODIS","frp":52.5,"province":"Masvingo","landcover":"Savanna Woodland","near_park":"Hwange NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.0762,-20.4479]},"properties":{"id":"F115","datetime":"2025-08-16T13:37:00Z","confidence":"high","satellite":"VIIRS","frp":73.5,"province":"Masvingo","landcover":"Cropland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.9099,-21.3741]},"properties":{"id":"F116","datetime":"2025-08-01T11:45:00Z","confidence":"high","satellite":"VIIRS","frp":114.5,"province":"Harare","landcover":"Riverine Forest","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.5053,-17.5882]},"properties":{"id":"F117","datetime":"2026-02-10T11:23:00Z","confidence":"high","satellite":"MODIS","frp":87.3,"province":"Manicaland","landcover":"Grassland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.7716,-18.6059]},"properties":{"id":"F118","datetime":"2026-01-14T08:21:00Z","confidence":"high","satellite":"VIIRS","frp":102.7,"province":"Bulawayo","landcover":"Riverine Forest","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[30.3172,-17.8975]},"properties":{"id":"F119","datetime":"2025-09-05T10:35:00Z","confidence":"high","satellite":"MODIS","frp":131.6,"province":"Mashonaland East","landcover":"Cropland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[30.4269,-16.7631]},"properties":{"id":"F120","datetime":"2025-08-17T11:01:00Z","confidence":"high","satellite":"MODIS","frp":62.2,"province":"Mashonaland Central","landcover":"Miombo Woodland","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.8655,-17.1901]},"properties":{"id":"F121","datetime":"2025-10-07T07:18:00Z","confidence":"high","satellite":"VIIRS","frp":23.6,"province":"Harare","landcover":"Cropland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.4944,-20.11]},"properties":{"id":"F122","datetime":"2025-09-06T08:53:00Z","confidence":"high","satellite":"VIIRS","frp":25.8,"province":"Masvingo","landcover":"Savanna Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.0415,-17.5068]},"properties":{"id":"F123","datetime":"2026-02-13T13:14:00Z","confidence":"high","satellite":"VIIRS","frp":106.6,"province":"Mashonaland Central","landcover":"Cropland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[30.4908,-18.5211]},"properties":{"id":"F124","datetime":"2026-02-11T12:32:00Z","confidence":"high","satellite":"MODIS","frp":43.0,"province":"Midlands","landcover":"Cropland","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.15,-18.04]},"properties":{"id":"F125","datetime":"2026-01-07T14:54:00Z","confidence":"high","satellite":"VIIRS","frp":18.8,"province":"Mashonaland Central","landcover":"Savanna Woodland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.3278,-16.2439]},"properties":{"id":"F126","datetime":"2025-09-14T09:52:00Z","confidence":"low","satellite":"MODIS","frp":5.9,"province":"Mashonaland East","landcover":"Savanna Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.0391,-15.6372]},"properties":{"id":"F127","datetime":"2026-01-08T07:53:00Z","confidence":"high","satellite":"MODIS","frp":48.0,"province":"Midlands","landcover":"Miombo Woodland","near_park":"Hwange NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.4377,-16.7576]},"properties":{"id":"F128","datetime":"2025-09-10T06:57:00Z","confidence":"low","satellite":"VIIRS","frp":18.0,"province":"Matabeleland North","landcover":"Mopane Woodland","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.7127,-18.6681]},"properties":{"id":"F129","datetime":"2026-02-02T10:07:00Z","confidence":"high","satellite":"VIIRS","frp":43.9,"province":"Mashonaland West","landcover":"Grassland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[32.2601,-18.3422]},"properties":{"id":"F130","datetime":"2025-07-09T08:18:00Z","confidence":"high","satellite":"MODIS","frp":82.6,"province":"Matabeleland North","landcover":"Rocky Outcrops","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.0764,-19.5673]},"properties":{"id":"F131","datetime":"2025-08-13T14:34:00Z","confidence":"high","satellite":"VIIRS","frp":53.7,"province":"Manicaland","landcover":"Cropland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.5396,-19.7692]},"properties":{"id":"F132","datetime":"2026-01-08T07:22:00Z","confidence":"high","satellite":"VIIRS","frp":7.2,"province":"Matabeleland South","landcover":"Cropland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.2773,-19.2406]},"properties":{"id":"F133","datetime":"2026-03-03T07:45:00Z","confidence":"high","satellite":"MODIS","frp":114.6,"province":"Matabeleland North","landcover":"Mopane Woodland","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.5417,-21.0436]},"properties":{"id":"F134","datetime":"2025-07-22T12:52:00Z","confidence":"high","satellite":"MODIS","frp":46.9,"province":"Mashonaland Central","landcover":"Savanna Woodland","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.4317,-16.5375]},"properties":{"id":"F135","datetime":"2025-07-25T07:51:00Z","confidence":"low","satellite":"MODIS","frp":13.6,"province":"Manicaland","landcover":"Grassland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[32.1782,-19.7708]},"properties":{"id":"F136","datetime":"2025-10-04T14:17:00Z","confidence":"high","satellite":"VIIRS","frp":72.2,"province":"Manicaland","landcover":"Savanna Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.8991,-16.8081]},"properties":{"id":"F137","datetime":"2025-11-28T10:19:00Z","confidence":"high","satellite":"MODIS","frp":15.8,"province":"Bulawayo","landcover":"Riverine Forest","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.4998,-19.3814]},"properties":{"id":"F138","datetime":"2026-02-14T11:39:00Z","confidence":"high","satellite":"MODIS","frp":122.5,"province":"Mashonaland Central","landcover":"Riverine Forest","near_park":"Hwange NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.7853,-18.0649]},"properties":{"id":"F139","datetime":"2026-01-03T08:01:00Z","confidence":"high","satellite":"VIIRS","frp":106.2,"province":"Bulawayo","landcover":"Riverine Forest","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.1863,-18.5427]},"properties":{"id":"F140","datetime":"2025-09-17T11:28:00Z","confidence":"low","satellite":"VIIRS","frp":33.4,"province":"Bulawayo","landcover":"Miombo Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.0622,-20.2622]},"properties":{"id":"F141","datetime":"2025-11-20T08:31:00Z","confidence":"high","satellite":"MODIS","frp":20.3,"province":"Harare","landcover":"Savanna Woodland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.2447,-17.6125]},"properties":{"id":"F142","datetime":"2025-10-18T13:12:00Z","confidence":"low","satellite":"VIIRS","frp":12.1,"province":"Midlands","landcover":"Cropland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.7259,-16.289]},"properties":{"id":"F143","datetime":"2026-02-13T11:42:00Z","confidence":"low","satellite":"MODIS","frp":28.9,"province":"Matabeleland South","landcover":"Rocky Outcrops","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.4648,-20.3603]},"properties":{"id":"F144","datetime":"2025-09-19T08:50:00Z","confidence":"low","satellite":"MODIS","frp":32.7,"province":"Harare","landcover":"Miombo Woodland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.0465,-19.0407]},"properties":{"id":"F145","datetime":"2026-01-01T14:08:00Z","confidence":"high","satellite":"VIIRS","frp":54.8,"province":"Matabeleland South","landcover":"Mopane Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[32.9968,-17.5117]},"properties":{"id":"F146","datetime":"2026-01-27T07:08:00Z","confidence":"low","satellite":"MODIS","frp":29.3,"province":"Matabeleland South","landcover":"Grassland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[32.0481,-17.0942]},"properties":{"id":"F147","datetime":"2025-10-02T14:58:00Z","confidence":"low","satellite":"VIIRS","frp":7.1,"province":"Matabeleland South","landcover":"Rocky Outcrops","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[32.5904,-18.8715]},"properties":{"id":"F148","datetime":"2025-11-23T14:17:00Z","confidence":"low","satellite":"VIIRS","frp":11.0,"province":"Mashonaland Central","landcover":"Rocky Outcrops","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.9287,-18.0413]},"properties":{"id":"F149","datetime":"2025-09-17T11:53:00Z","confidence":"high","satellite":"VIIRS","frp":89.3,"province":"Matabeleland North","landcover":"Savanna Woodland","near_park":"Hwange NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[32.5987,-17.157]},"properties":{"id":"F150","datetime":"2025-11-13T12:39:00Z","confidence":"low","satellite":"VIIRS","frp":27.5,"province":"Masvingo","landcover":"Riverine Forest","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.4594,-15.8948]},"properties":{"id":"F151","datetime":"2026-03-05T12:19:00Z","confidence":"high","satellite":"MODIS","frp":114.0,"province":"Matabeleland South","landcover":"Riverine Forest","near_park":"Hwange NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.433,-19.5738]},"properties":{"id":"F152","datetime":"2026-02-23T11:55:00Z","confidence":"high","satellite":"MODIS","frp":86.9,"province":"Mashonaland East","landcover":"Grassland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.1332,-18.8981]},"properties":{"id":"F153","datetime":"2025-08-24T10:28:00Z","confidence":"high","satellite":"VIIRS","frp":68.0,"province":"Midlands","landcover":"Savanna Woodland","near_park":"Hwange NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.4637,-19.7878]},"properties":{"id":"F154","datetime":"2026-01-31T08:52:00Z","confidence":"high","satellite":"MODIS","frp":121.8,"province":"Bulawayo","landcover":"Riverine Forest","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.6807,-21.3165]},"properties":{"id":"F155","datetime":"2026-02-25T06:05:00Z","confidence":"high","satellite":"MODIS","frp":46.7,"province":"Harare","landcover":"Grassland","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.8781,-20.0003]},"properties":{"id":"F156","datetime":"2025-07-26T13:18:00Z","confidence":"high","satellite":"VIIRS","frp":85.7,"province":"Matabeleland South","landcover":"Grassland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[32.0832,-17.4529]},"properties":{"id":"F157","datetime":"2026-01-23T14:12:00Z","confidence":"high","satellite":"MODIS","frp":59.1,"province":"Harare","landcover":"Mopane Woodland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.2135,-19.3376]},"properties":{"id":"F158","datetime":"2025-11-21T07:08:00Z","confidence":"low","satellite":"VIIRS","frp":22.9,"province":"Manicaland","landcover":"Mopane Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.3253,-18.3033]},"properties":{"id":"F159","datetime":"2026-01-22T08:45:00Z","confidence":"high","satellite":"MODIS","frp":11.1,"province":"Masvingo","landcover":"Rocky Outcrops","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.6845,-19.7279]},"properties":{"id":"F160","datetime":"2025-12-01T14:34:00Z","confidence":"high","satellite":"MODIS","frp":73.5,"province":"Bulawayo","landcover":"Mopane Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.5628,-19.8952]},"properties":{"id":"F161","datetime":"2025-08-26T06:38:00Z","confidence":"low","satellite":"MODIS","frp":21.7,"province":"Mashonaland Central","landcover":"Riverine Forest","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.7055,-17.4945]},"properties":{"id":"F162","datetime":"2026-03-03T12:09:00Z","confidence":"high","satellite":"VIIRS","frp":89.9,"province":"Matabeleland North","landcover":"Rocky Outcrops","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.6881,-19.4009]},"properties":{"id":"F163","datetime":"2026-01-31T12:32:00Z","confidence":"high","satellite":"MODIS","frp":98.2,"province":"Matabeleland North","landcover":"Riverine Forest","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.2457,-18.586]},"properties":{"id":"F164","datetime":"2026-03-02T08:29:00Z","confidence":"high","satellite":"MODIS","frp":47.4,"province":"Harare","landcover":"Mopane Woodland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.1228,-18.605]},"properties":{"id":"F165","datetime":"2025-10-24T10:45:00Z","confidence":"low","satellite":"VIIRS","frp":34.4,"province":"Masvingo","landcover":"Mopane Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.9207,-16.0508]},"properties":{"id":"F166","datetime":"2025-11-18T14:24:00Z","confidence":"high","satellite":"MODIS","frp":82.4,"province":"Mashonaland East","landcover":"Cropland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.4655,-20.4441]},"properties":{"id":"F167","datetime":"2025-08-10T10:47:00Z","confidence":"high","satellite":"MODIS","frp":64.7,"province":"Mashonaland West","landcover":"Miombo Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.3148,-18.5783]},"properties":{"id":"F168","datetime":"2025-11-17T09:15:00Z","confidence":"high","satellite":"VIIRS","frp":88.1,"province":"Harare","landcover":"Miombo Woodland","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.6094,-19.5896]},"properties":{"id":"F169","datetime":"2026-02-27T06:35:00Z","confidence":"high","satellite":"VIIRS","frp":109.1,"province":"Manicaland","landcover":"Riverine Forest","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.9241,-21.0437]},"properties":{"id":"F170","datetime":"2025-11-25T07:41:00Z","confidence":"high","satellite":"VIIRS","frp":92.2,"province":"Harare","landcover":"Riverine Forest","near_park":"Hwange NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.2966,-19.0314]},"properties":{"id":"F171","datetime":"2025-11-26T07:59:00Z","confidence":"low","satellite":"MODIS","frp":3.3,"province":"Mashonaland Central","landcover":"Grassland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.2897,-16.353]},"properties":{"id":"F172","datetime":"2025-09-07T09:51:00Z","confidence":"low","satellite":"VIIRS","frp":18.0,"province":"Mashonaland East","landcover":"Miombo Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[30.2566,-17.5135]},"properties":{"id":"F173","datetime":"2025-07-08T09:11:00Z","confidence":"low","satellite":"MODIS","frp":28.3,"province":"Manicaland","landcover":"Rocky Outcrops","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.8766,-17.8491]},"properties":{"id":"F174","datetime":"2025-10-03T09:00:00Z","confidence":"low","satellite":"MODIS","frp":18.3,"province":"Manicaland","landcover":"Miombo Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.5552,-17.4844]},"properties":{"id":"F175","datetime":"2025-07-06T09:03:00Z","confidence":"high","satellite":"VIIRS","frp":53.5,"province":"Masvingo","landcover":"Mopane Woodland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.3622,-18.9829]},"properties":{"id":"F176","datetime":"2025-12-07T10:23:00Z","confidence":"low","satellite":"VIIRS","frp":23.4,"province":"Mashonaland West","landcover":"Miombo Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.3948,-17.3154]},"properties":{"id":"F177","datetime":"2026-01-08T13:48:00Z","confidence":"high","satellite":"VIIRS","frp":79.1,"province":"Mashonaland West","landcover":"Riverine Forest","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.6846,-17.6144]},"properties":{"id":"F178","datetime":"2025-08-09T14:57:00Z","confidence":"low","satellite":"VIIRS","frp":6.6,"province":"Bulawayo","landcover":"Rocky Outcrops","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.4834,-16.5895]},"properties":{"id":"F179","datetime":"2026-02-12T13:05:00Z","confidence":"high","satellite":"MODIS","frp":32.7,"province":"Matabeleland North","landcover":"Grassland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.2033,-19.2938]},"properties":{"id":"F180","datetime":"2025-07-30T10:46:00Z","confidence":"high","satellite":"VIIRS","frp":95.8,"province":"Manicaland","landcover":"Mopane Woodland","near_park":"Hwange NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.0173,-18.4675]},"properties":{"id":"F181","datetime":"2025-07-24T14:03:00Z","confidence":"high","satellite":"VIIRS","frp":99.6,"province":"Masvingo","landcover":"Savanna Woodland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.3892,-17.171]},"properties":{"id":"F182","datetime":"2026-02-01T13:55:00Z","confidence":"high","satellite":"MODIS","frp":125.3,"province":"Manicaland","landcover":"Savanna Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.2373,-16.5501]},"properties":{"id":"F183","datetime":"2025-08-30T14:08:00Z","confidence":"high","satellite":"VIIRS","frp":77.5,"province":"Matabeleland North","landcover":"Cropland","near_park":"Hwange NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[32.8322,-19.2516]},"properties":{"id":"F184","datetime":"2026-02-03T09:29:00Z","confidence":"high","satellite":"MODIS","frp":116.2,"province":"Midlands","landcover":"Mopane Woodland","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[32.5118,-17.4698]},"properties":{"id":"F185","datetime":"2025-08-27T06:15:00Z","confidence":"high","satellite":"VIIRS","frp":94.1,"province":"Matabeleland South","landcover":"Savanna Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[30.9762,-19.6646]},"properties":{"id":"F186","datetime":"2025-10-28T06:08:00Z","confidence":"high","satellite":"MODIS","frp":106.8,"province":"Mashonaland West","landcover":"Cropland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.6874,-18.3342]},"properties":{"id":"F187","datetime":"2025-12-12T14:14:00Z","confidence":"high","satellite":"MODIS","frp":123.3,"province":"Mashonaland Central","landcover":"Mopane Woodland","near_park":"Hwange NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.5424,-18.3767]},"properties":{"id":"F188","datetime":"2025-09-28T13:03:00Z","confidence":"high","satellite":"MODIS","frp":62.7,"province":"Manicaland","landcover":"Cropland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.6861,-19.569]},"properties":{"id":"F189","datetime":"2025-09-15T14:30:00Z","confidence":"high","satellite":"VIIRS","frp":29.8,"province":"Mashonaland West","landcover":"Mopane Woodland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.5866,-15.8191]},"properties":{"id":"F190","datetime":"2025-09-07T11:41:00Z","confidence":"high","satellite":"VIIRS","frp":39.4,"province":"Masvingo","landcover":"Cropland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.9212,-17.4728]},"properties":{"id":"F191","datetime":"2025-10-06T06:55:00Z","confidence":"high","satellite":"VIIRS","frp":55.9,"province":"Mashonaland West","landcover":"Cropland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[30.8496,-18.5998]},"properties":{"id":"F192","datetime":"2026-03-03T10:58:00Z","confidence":"high","satellite":"VIIRS","frp":127.4,"province":"Mashonaland West","landcover":"Miombo Woodland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.0257,-17.2706]},"properties":{"id":"F193","datetime":"2025-11-02T12:58:00Z","confidence":"low","satellite":"VIIRS","frp":25.5,"province":"Harare","landcover":"Mopane Woodland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.1692,-18.7712]},"properties":{"id":"F194","datetime":"2025-12-31T13:29:00Z","confidence":"high","satellite":"VIIRS","frp":53.6,"province":"Masvingo","landcover":"Cropland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.4287,-18.5748]},"properties":{"id":"F195","datetime":"2025-10-22T14:59:00Z","confidence":"low","satellite":"MODIS","frp":3.5,"province":"Mashonaland Central","landcover":"Miombo Woodland","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.7729,-19.8171]},"properties":{"id":"F196","datetime":"2025-11-03T11:16:00Z","confidence":"high","satellite":"MODIS","frp":93.4,"province":"Masvingo","landcover":"Grassland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.2917,-18.6835]},"properties":{"id":"F197","datetime":"2025-10-03T06:33:00Z","confidence":"low","satellite":"VIIRS","frp":20.3,"province":"Matabeleland South","landcover":"Cropland","near_park":"Hwange NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.1618,-19.5957]},"properties":{"id":"F198","datetime":"2025-10-27T09:32:00Z","confidence":"high","satellite":"MODIS","frp":25.4,"province":"Mashonaland East","landcover":"Savanna Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[30.1743,-16.0495]},"properties":{"id":"F199","datetime":"2026-03-05T14:35:00Z","confidence":"low","satellite":"MODIS","frp":3.5,"province":"Matabeleland North","landcover":"Savanna Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[30.8331,-18.757]},"properties":{"id":"F200","datetime":"2025-11-24T12:51:00Z","confidence":"high","satellite":"VIIRS","frp":114.8,"province":"Matabeleland South","landcover":"Savanna Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.3614,-21.0949]},"properties":{"id":"F201","datetime":"2025-11-07T12:05:00Z","confidence":"low","satellite":"MODIS","frp":11.6,"province":"Manicaland","landcover":"Grassland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.097,-17.6588]},"properties":{"id":"F202","datetime":"2025-12-01T06:05:00Z","confidence":"low","satellite":"MODIS","frp":30.1,"province":"Manicaland","landcover":"Grassland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.9128,-18.0701]},"properties":{"id":"F203","datetime":"2025-09-26T11:36:00Z","confidence":"high","satellite":"VIIRS","frp":119.1,"province":"Harare","landcover":"Savanna Woodland","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.8491,-16.4968]},"properties":{"id":"F204","datetime":"2026-03-01T10:57:00Z","confidence":"high","satellite":"VIIRS","frp":129.8,"province":"Midlands","landcover":"Cropland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.3221,-20.9913]},"properties":{"id":"F205","datetime":"2025-09-12T12:59:00Z","confidence":"low","satellite":"VIIRS","frp":25.8,"province":"Mashonaland Central","landcover":"Miombo Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.0757,-16.7244]},"properties":{"id":"F206","datetime":"2026-01-16T12:48:00Z","confidence":"low","satellite":"VIIRS","frp":20.3,"province":"Matabeleland South","landcover":"Rocky Outcrops","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.2943,-17.1398]},"properties":{"id":"F207","datetime":"2025-07-16T13:31:00Z","confidence":"high","satellite":"VIIRS","frp":110.8,"province":"Mashonaland East","landcover":"Rocky Outcrops","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.5684,-17.7781]},"properties":{"id":"F208","datetime":"2026-01-11T09:45:00Z","confidence":"high","satellite":"VIIRS","frp":88.5,"province":"Matabeleland South","landcover":"Mopane Woodland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.164,-17.0695]},"properties":{"id":"F209","datetime":"2025-09-17T07:05:00Z","confidence":"low","satellite":"VIIRS","frp":13.1,"province":"Mashonaland Central","landcover":"Grassland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.5445,-18.9154]},"properties":{"id":"F210","datetime":"2025-08-22T07:38:00Z","confidence":"high","satellite":"MODIS","frp":52.8,"province":"Manicaland","landcover":"Savanna Woodland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.4277,-17.1017]},"properties":{"id":"F211","datetime":"2025-11-02T12:10:00Z","confidence":"high","satellite":"VIIRS","frp":27.9,"province":"Mashonaland Central","landcover":"Mopane Woodland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.5905,-19.5365]},"properties":{"id":"F212","datetime":"2026-03-05T09:46:00Z","confidence":"low","satellite":"MODIS","frp":14.6,"province":"Bulawayo","landcover":"Rocky Outcrops","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.2528,-19.7093]},"properties":{"id":"F213","datetime":"2026-01-11T11:27:00Z","confidence":"low","satellite":"VIIRS","frp":13.5,"province":"Mashonaland Central","landcover":"Mopane Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.6506,-15.8409]},"properties":{"id":"F214","datetime":"2025-12-11T13:36:00Z","confidence":"high","satellite":"VIIRS","frp":98.8,"province":"Mashonaland East","landcover":"Grassland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.5687,-19.728]},"properties":{"id":"F215","datetime":"2025-08-28T14:11:00Z","confidence":"low","satellite":"VIIRS","frp":9.4,"province":"Masvingo","landcover":"Riverine Forest","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.6199,-20.4189]},"properties":{"id":"F216","datetime":"2025-08-05T12:43:00Z","confidence":"low","satellite":"MODIS","frp":28.5,"province":"Midlands","landcover":"Riverine Forest","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.0878,-17.9211]},"properties":{"id":"F217","datetime":"2026-02-02T13:37:00Z","confidence":"low","satellite":"MODIS","frp":5.4,"province":"Harare","landcover":"Rocky Outcrops","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.4404,-17.0231]},"properties":{"id":"F218","datetime":"2026-01-01T07:06:00Z","confidence":"low","satellite":"VIIRS","frp":29.0,"province":"Mashonaland East","landcover":"Miombo Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.2182,-18.9274]},"properties":{"id":"F219","datetime":"2025-10-22T14:09:00Z","confidence":"high","satellite":"MODIS","frp":57.8,"province":"Matabeleland North","landcover":"Grassland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.5044,-16.1403]},"properties":{"id":"F220","datetime":"2025-08-13T08:22:00Z","confidence":"high","satellite":"MODIS","frp":132.0,"province":"Mashonaland East","landcover":"Grassland","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.9615,-17.4904]},"properties":{"id":"F221","datetime":"2026-02-17T07:01:00Z","confidence":"high","satellite":"MODIS","frp":45.5,"province":"Matabeleland South","landcover":"Riverine Forest","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[32.4534,-17.3647]},"properties":{"id":"F222","datetime":"2025-09-28T12:29:00Z","confidence":"high","satellite":"VIIRS","frp":49.7,"province":"Manicaland","landcover":"Riverine Forest","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.6538,-17.9303]},"properties":{"id":"F223","datetime":"2026-01-19T09:28:00Z","confidence":"high","satellite":"MODIS","frp":87.9,"province":"Manicaland","landcover":"Savanna Woodland","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.8051,-17.2842]},"properties":{"id":"F224","datetime":"2025-08-02T14:11:00Z","confidence":"high","satellite":"MODIS","frp":112.9,"province":"Mashonaland East","landcover":"Miombo Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.0888,-17.8392]},"properties":{"id":"F225","datetime":"2026-03-08T12:39:00Z","confidence":"high","satellite":"MODIS","frp":91.3,"province":"Bulawayo","landcover":"Savanna Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.9455,-19.2865]},"properties":{"id":"F226","datetime":"2025-09-27T10:58:00Z","confidence":"low","satellite":"VIIRS","frp":25.6,"province":"Midlands","landcover":"Mopane Woodland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.23,-18.3443]},"properties":{"id":"F227","datetime":"2026-01-13T14:44:00Z","confidence":"high","satellite":"VIIRS","frp":70.7,"province":"Harare","landcover":"Miombo Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.7675,-18.188]},"properties":{"id":"F228","datetime":"2025-12-31T09:52:00Z","confidence":"low","satellite":"MODIS","frp":18.5,"province":"Harare","landcover":"Rocky Outcrops","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.3912,-19.0563]},"properties":{"id":"F229","datetime":"2026-02-13T06:50:00Z","confidence":"high","satellite":"VIIRS","frp":16.2,"province":"Mashonaland Central","landcover":"Savanna Woodland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.9538,-20.437]},"properties":{"id":"F230","datetime":"2026-02-20T13:35:00Z","confidence":"high","satellite":"VIIRS","frp":109.3,"province":"Bulawayo","landcover":"Savanna Woodland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.2459,-16.8017]},"properties":{"id":"F231","datetime":"2026-01-04T13:34:00Z","confidence":"high","satellite":"VIIRS","frp":107.2,"province":"Manicaland","landcover":"Savanna Woodland","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.5221,-15.6047]},"properties":{"id":"F232","datetime":"2026-02-16T07:28:00Z","confidence":"high","satellite":"VIIRS","frp":121.4,"province":"Mashonaland West","landcover":"Miombo Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[30.5752,-16.5449]},"properties":{"id":"F233","datetime":"2026-02-05T09:52:00Z","confidence":"high","satellite":"VIIRS","frp":23.8,"province":"Matabeleland North","landcover":"Rocky Outcrops","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.3518,-18.3414]},"properties":{"id":"F234","datetime":"2025-09-25T10:36:00Z","confidence":"high","satellite":"MODIS","frp":100.0,"province":"Harare","landcover":"Riverine Forest","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.2576,-17.2994]},"properties":{"id":"F235","datetime":"2026-01-27T08:44:00Z","confidence":"low","satellite":"VIIRS","frp":34.8,"province":"Mashonaland West","landcover":"Miombo Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.6622,-17.222]},"properties":{"id":"F236","datetime":"2026-01-18T10:40:00Z","confidence":"high","satellite":"MODIS","frp":83.0,"province":"Manicaland","landcover":"Grassland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[30.1423,-16.4151]},"properties":{"id":"F237","datetime":"2025-08-17T11:29:00Z","confidence":"high","satellite":"MODIS","frp":106.2,"province":"Mashonaland East","landcover":"Rocky Outcrops","near_park":"Hwange NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[30.1518,-17.6584]},"properties":{"id":"F238","datetime":"2025-08-02T12:52:00Z","confidence":"low","satellite":"VIIRS","frp":15.7,"province":"Masvingo","landcover":"Mopane Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.7079,-18.5502]},"properties":{"id":"F239","datetime":"2026-03-06T06:02:00Z","confidence":"low","satellite":"VIIRS","frp":31.6,"province":"Masvingo","landcover":"Savanna Woodland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.7608,-15.6555]},"properties":{"id":"F240","datetime":"2026-02-05T08:56:00Z","confidence":"high","satellite":"MODIS","frp":98.0,"province":"Midlands","landcover":"Cropland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.9281,-19.949]},"properties":{"id":"F241","datetime":"2025-08-12T08:03:00Z","confidence":"high","satellite":"MODIS","frp":127.0,"province":"Mashonaland Central","landcover":"Riverine Forest","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.9424,-20.9487]},"properties":{"id":"F242","datetime":"2025-08-09T13:00:00Z","confidence":"high","satellite":"VIIRS","frp":35.5,"province":"Mashonaland East","landcover":"Cropland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.1879,-17.4308]},"properties":{"id":"F243","datetime":"2025-08-22T10:08:00Z","confidence":"high","satellite":"MODIS","frp":54.6,"province":"Midlands","landcover":"Riverine Forest","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.7336,-18.5696]},"properties":{"id":"F244","datetime":"2025-09-23T08:58:00Z","confidence":"high","satellite":"MODIS","frp":102.5,"province":"Bulawayo","landcover":"Riverine Forest","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.9836,-17.2834]},"properties":{"id":"F245","datetime":"2026-01-13T08:15:00Z","confidence":"high","satellite":"MODIS","frp":63.0,"province":"Matabeleland South","landcover":"Miombo Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.8878,-17.496]},"properties":{"id":"F246","datetime":"2025-11-23T10:13:00Z","confidence":"low","satellite":"VIIRS","frp":25.1,"province":"Manicaland","landcover":"Mopane Woodland","near_park":"Hwange NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.3137,-17.0023]},"properties":{"id":"F247","datetime":"2025-10-31T13:40:00Z","confidence":"high","satellite":"VIIRS","frp":20.2,"province":"Harare","landcover":"Savanna Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.9143,-18.535]},"properties":{"id":"F248","datetime":"2026-01-04T13:49:00Z","confidence":"high","satellite":"VIIRS","frp":28.3,"province":"Matabeleland North","landcover":"Rocky Outcrops","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.3076,-20.9329]},"properties":{"id":"F249","datetime":"2025-07-31T10:40:00Z","confidence":"low","satellite":"MODIS","frp":15.7,"province":"Manicaland","landcover":"Riverine Forest","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.8429,-18.7514]},"properties":{"id":"F250","datetime":"2025-09-17T14:58:00Z","confidence":"high","satellite":"VIIRS","frp":46.8,"province":"Midlands","landcover":"Rocky Outcrops","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.2477,-18.0868]},"properties":{"id":"F251","datetime":"2025-08-03T09:03:00Z","confidence":"high","satellite":"VIIRS","frp":64.1,"province":"Matabeleland South","landcover":"Grassland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.7363,-18.2599]},"properties":{"id":"F252","datetime":"2025-12-06T08:07:00Z","confidence":"low","satellite":"VIIRS","frp":24.1,"province":"Midlands","landcover":"Riverine Forest","near_park":"Hwange NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.2794,-17.0757]},"properties":{"id":"F253","datetime":"2025-11-10T10:46:00Z","confidence":"high","satellite":"VIIRS","frp":22.1,"province":"Matabeleland North","landcover":"Mopane Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[30.7561,-18.4788]},"properties":{"id":"F254","datetime":"2025-08-09T06:31:00Z","confidence":"high","satellite":"VIIRS","frp":74.0,"province":"Mashonaland East","landcover":"Miombo Woodland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.5587,-19.925]},"properties":{"id":"F255","datetime":"2025-09-15T06:35:00Z","confidence":"high","satellite":"MODIS","frp":134.6,"province":"Mashonaland West","landcover":"Mopane Woodland","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.4468,-17.502]},"properties":{"id":"F256","datetime":"2025-11-16T07:32:00Z","confidence":"low","satellite":"VIIRS","frp":21.3,"province":"Midlands","landcover":"Miombo Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.402,-16.655]},"properties":{"id":"F257","datetime":"2025-12-15T11:12:00Z","confidence":"high","satellite":"MODIS","frp":66.7,"province":"Bulawayo","landcover":"Cropland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.0725,-15.7914]},"properties":{"id":"F258","datetime":"2025-10-09T09:09:00Z","confidence":"low","satellite":"VIIRS","frp":20.5,"province":"Manicaland","landcover":"Savanna Woodland","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.4241,-18.0756]},"properties":{"id":"F259","datetime":"2025-07-05T12:54:00Z","confidence":"low","satellite":"MODIS","frp":3.0,"province":"Matabeleland South","landcover":"Miombo Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.3105,-20.4972]},"properties":{"id":"F260","datetime":"2025-07-23T14:26:00Z","confidence":"low","satellite":"MODIS","frp":31.7,"province":"Masvingo","landcover":"Riverine Forest","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.73,-18.9631]},"properties":{"id":"F261","datetime":"2026-01-18T12:42:00Z","confidence":"high","satellite":"VIIRS","frp":81.7,"province":"Mashonaland West","landcover":"Mopane Woodland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.265,-16.7431]},"properties":{"id":"F262","datetime":"2025-12-15T07:12:00Z","confidence":"high","satellite":"VIIRS","frp":41.7,"province":"Bulawayo","landcover":"Savanna Woodland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.9946,-17.1617]},"properties":{"id":"F263","datetime":"2026-02-17T07:05:00Z","confidence":"high","satellite":"VIIRS","frp":40.8,"province":"Mashonaland Central","landcover":"Cropland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.1361,-19.9809]},"properties":{"id":"F264","datetime":"2026-03-20T08:01:00Z","confidence":"high","satellite":"MODIS","frp":45.3,"province":"Masvingo","landcover":"Rocky Outcrops","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.1489,-19.2581]},"properties":{"id":"F265","datetime":"2025-09-10T09:08:00Z","confidence":"high","satellite":"VIIRS","frp":13.3,"province":"Manicaland","landcover":"Mopane Woodland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.7958,-21.2577]},"properties":{"id":"F266","datetime":"2026-02-07T06:24:00Z","confidence":"low","satellite":"MODIS","frp":15.6,"province":"Midlands","landcover":"Mopane Woodland","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.99,-18.2046]},"properties":{"id":"F267","datetime":"2025-11-29T13:03:00Z","confidence":"high","satellite":"VIIRS","frp":124.2,"province":"Mashonaland Central","landcover":"Grassland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.47,-18.03]},"properties":{"id":"F268","datetime":"2025-11-05T06:24:00Z","confidence":"high","satellite":"MODIS","frp":113.3,"province":"Masvingo","landcover":"Rocky Outcrops","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.8835,-18.5536]},"properties":{"id":"F269","datetime":"2025-12-12T11:38:00Z","confidence":"high","satellite":"VIIRS","frp":29.3,"province":"Matabeleland North","landcover":"Cropland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.3296,-17.1855]},"properties":{"id":"F270","datetime":"2025-10-28T09:17:00Z","confidence":"low","satellite":"VIIRS","frp":6.2,"province":"Mashonaland West","landcover":"Rocky Outcrops","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.9675,-16.6933]},"properties":{"id":"F271","datetime":"2025-09-27T11:58:00Z","confidence":"high","satellite":"VIIRS","frp":85.0,"province":"Mashonaland East","landcover":"Rocky Outcrops","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[32.769,-18.7136]},"properties":{"id":"F272","datetime":"2025-09-28T09:38:00Z","confidence":"high","satellite":"VIIRS","frp":17.2,"province":"Matabeleland North","landcover":"Rocky Outcrops","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.7714,-21.5127]},"properties":{"id":"F273","datetime":"2025-09-29T11:03:00Z","confidence":"low","satellite":"VIIRS","frp":30.0,"province":"Midlands","landcover":"Rocky Outcrops","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.114,-15.9949]},"properties":{"id":"F274","datetime":"2026-01-19T11:08:00Z","confidence":"high","satellite":"VIIRS","frp":50.4,"province":"Manicaland","landcover":"Cropland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[32.7562,-17.6838]},"properties":{"id":"F275","datetime":"2025-12-30T08:24:00Z","confidence":"high","satellite":"MODIS","frp":84.5,"province":"Mashonaland Central","landcover":"Miombo Woodland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.923,-18.5543]},"properties":{"id":"F276","datetime":"2026-03-12T09:22:00Z","confidence":"high","satellite":"MODIS","frp":105.6,"province":"Midlands","landcover":"Riverine Forest","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.609,-17.8438]},"properties":{"id":"F277","datetime":"2025-12-19T09:44:00Z","confidence":"high","satellite":"VIIRS","frp":40.8,"province":"Mashonaland East","landcover":"Mopane Woodland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.6181,-19.5464]},"properties":{"id":"F278","datetime":"2025-09-24T12:22:00Z","confidence":"low","satellite":"MODIS","frp":18.8,"province":"Matabeleland South","landcover":"Cropland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.3521,-18.4692]},"properties":{"id":"F279","datetime":"2025-10-24T06:18:00Z","confidence":"high","satellite":"VIIRS","frp":15.0,"province":"Mashonaland East","landcover":"Mopane Woodland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.7788,-21.2433]},"properties":{"id":"F280","datetime":"2026-01-09T07:21:00Z","confidence":"high","satellite":"MODIS","frp":15.1,"province":"Matabeleland North","landcover":"Grassland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.6177,-20.1486]},"properties":{"id":"F281","datetime":"2025-10-06T14:16:00Z","confidence":"high","satellite":"MODIS","frp":79.8,"province":"Mashonaland Central","landcover":"Miombo Woodland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.0145,-19.4923]},"properties":{"id":"F282","datetime":"2025-11-28T13:12:00Z","confidence":"low","satellite":"VIIRS","frp":23.0,"province":"Matabeleland North","landcover":"Miombo Woodland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[30.1779,-15.756]},"properties":{"id":"F283","datetime":"2026-02-28T12:30:00Z","confidence":"low","satellite":"MODIS","frp":12.9,"province":"Mashonaland Central","landcover":"Savanna Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.2227,-19.8771]},"properties":{"id":"F284","datetime":"2026-01-12T10:28:00Z","confidence":"high","satellite":"MODIS","frp":65.2,"province":"Mashonaland Central","landcover":"Miombo Woodland","near_park":"Chizarira NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[30.4115,-16.9044]},"properties":{"id":"F285","datetime":"2026-01-28T14:03:00Z","confidence":"low","satellite":"MODIS","frp":21.9,"province":"Harare","landcover":"Grassland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.531,-19.7153]},"properties":{"id":"F286","datetime":"2025-07-18T08:07:00Z","confidence":"high","satellite":"MODIS","frp":126.6,"province":"Midlands","landcover":"Miombo Woodland","near_park":"Matobo NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.5023,-15.6797]},"properties":{"id":"F287","datetime":"2026-02-08T08:53:00Z","confidence":"high","satellite":"MODIS","frp":116.0,"province":"Mashonaland East","landcover":"Riverine Forest","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.8788,-18.6167]},"properties":{"id":"F288","datetime":"2025-12-14T06:50:00Z","confidence":"low","satellite":"MODIS","frp":19.6,"province":"Matabeleland South","landcover":"Grassland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.356,-18.402]},"properties":{"id":"F289","datetime":"2025-08-21T07:50:00Z","confidence":"low","satellite":"MODIS","frp":21.0,"province":"Harare","landcover":"Mopane Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.2603,-17.9474]},"properties":{"id":"F290","datetime":"2026-02-28T08:39:00Z","confidence":"high","satellite":"MODIS","frp":42.2,"province":"Matabeleland North","landcover":"Grassland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.9067,-20.5736]},"properties":{"id":"F291","datetime":"2026-01-07T10:19:00Z","confidence":"high","satellite":"MODIS","frp":115.3,"province":"Masvingo","landcover":"Cropland","near_park":"Gonarezhou NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[27.5437,-17.3427]},"properties":{"id":"F292","datetime":"2025-12-12T07:12:00Z","confidence":"high","satellite":"MODIS","frp":61.3,"province":"Mashonaland West","landcover":"Cropland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[30.9794,-17.2354]},"properties":{"id":"F293","datetime":"2026-01-08T08:04:00Z","confidence":"low","satellite":"MODIS","frp":19.5,"province":"Harare","landcover":"Grassland","near_park":"Mana Pools NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[31.288,-18.8349]},"properties":{"id":"F294","datetime":"2025-07-15T09:53:00Z","confidence":"high","satellite":"VIIRS","frp":123.1,"province":"Mashonaland West","landcover":"Savanna Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[25.5944,-19.9494]},"properties":{"id":"F295","datetime":"2025-10-10T14:25:00Z","confidence":"high","satellite":"VIIRS","frp":116.2,"province":"Matabeleland North","landcover":"Miombo Woodland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.0125,-19.3665]},"properties":{"id":"F296","datetime":"2026-02-28T08:53:00Z","confidence":"high","satellite":"MODIS","frp":52.2,"province":"Matabeleland South","landcover":"Mopane Woodland","near_park":"Hwange NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.6636,-15.8386]},"properties":{"id":"F297","datetime":"2025-10-22T10:41:00Z","confidence":"high","satellite":"MODIS","frp":96.5,"province":"Harare","landcover":"Savanna Woodland","near_park":"Hwange NP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[26.551,-16.9541]},"properties":{"id":"F298","datetime":"2025-10-23T10:45:00Z","confidence":"high","satellite":"MODIS","frp":113.7,"province":"Manicaland","landcover":"Grassland","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[28.7802,-20.9162]},"properties":{"id":"F299","datetime":"2025-12-02T12:37:00Z","confidence":"low","satellite":"VIIRS","frp":29.4,"province":"Matabeleland North","landcover":"Rocky Outcrops","near_park":"none"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[29.5794,-18.3623]},"properties":{"id":"F300","datetime":"2025-11-22T07:21:00Z","confidence":"high","satellite":"MODIS","frp":19.6,"province":"Mashonaland East","landcover":"Cropland","near_park":"Chizarira NP"}}]}
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.41976,
+          -18.3548
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-13T11:23:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 14.88
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.65621,
+          -18.35708
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-13T22:35:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 1.08
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.65547,
+          -18.36001
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-13T22:35:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 2.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.47279,
+          -18.3681
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-13T22:35:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 2.93
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.50657,
+          -18.43861
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-13T22:35:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 2.59
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.65463,
+          -18.36073
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-14T00:16:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 1.12
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.65883,
+          -18.36117
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-14T00:16:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 1.12
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.41899,
+          -18.3477
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-14T00:16:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 0.71
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.47398,
+          -18.36507
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-14T00:16:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 1.95
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.47316,
+          -18.37077
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-14T00:16:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 2.27
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.47721,
+          -18.3712
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-14T00:16:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 1.43
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.47398,
+          -18.36594
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-14T00:16:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 2.86
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.47315,
+          -18.37164
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-14T00:16:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 1.74
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.4772,
+          -18.37204
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-14T00:16:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 1.05
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.42167,
+          -18.4242
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-14T00:16:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 0.89
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.4808,
+          -18.4361
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-14T00:16:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 1.71
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.50966,
+          -18.43908
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-14T00:16:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 2.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.48101,
+          -18.36928
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-14T12:46:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 8.69
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.42215,
+          -18.35245
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-14T23:56:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 2.48
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.51466,
+          -18.4417
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-15T12:27:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 7.48
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.39484,
+          -18.32383
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-15T23:37:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 0.69
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.47835,
+          -18.36753
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-15T23:37:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 2.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.47778,
+          -18.37087
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-15T23:37:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 2.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.53816,
+          -18.41795
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-15T23:37:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 1.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.51226,
+          -18.43976
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-15T23:37:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 1.03
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.48203,
+          -18.4386
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-15T23:37:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 0.64
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.51169,
+          -18.44312
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-15T23:37:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 1.03
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.52286,
+          -18.44481
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-15T23:37:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 1.24
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.51319,
+          -18.44246
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-16T12:08:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 5.15
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.47894,
+          -18.36929
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-16T12:08:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 6.87
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.45266,
+          -18.3664
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-16T12:08:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 5.87
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.66161,
+          -18.35912
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-16T23:20:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 0.72
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.65623,
+          -18.36198
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-16T23:20:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 0.72
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.6585,
+          -18.36102
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-16T23:20:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 1.64
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.48339,
+          -18.43905
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-17T11:49:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 5.15
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.48076,
+          -18.37255
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-17T11:49:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 3.78
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.42547,
+          -18.35218
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-17T11:49:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 11.37
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.42301,
+          -18.35605
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-18T11:30:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 11.77
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.37772,
+          -18.05157
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-18T22:40:00Z",
+        "confidence": "nominal",
+        "province": "MASHONALAND WEST",
+        "satellite": "VIIRS",
+        "frp": 0.62
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.79759,
+          -19.46382
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-18T22:42:00Z",
+        "confidence": "nominal",
+        "province": "MIDLANDS",
+        "satellite": "VIIRS",
+        "frp": 0.23
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.47528,
+          -18.36459
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-19T00:22:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 1.76
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.47437,
+          -18.37087
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-19T00:22:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 1.95
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.47951,
+          -18.37136
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-19T00:22:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 1.98
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.50462,
+          -18.40163
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-19T00:22:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 1.85
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.86422,
+          -22.11471
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-19T11:10:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND SOUTH",
+        "satellite": "VIIRS",
+        "frp": 2.91
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.86101,
+          -22.11504
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-19T11:10:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND SOUTH",
+        "satellite": "VIIRS",
+        "frp": 2.91
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.51439,
+          -18.44332
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-19T11:10:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 8.85
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.66101,
+          -18.36161
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-20T00:01:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 1.38
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.47461,
+          -18.36793
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-20T00:01:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 2.65
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.4796,
+          -18.36853
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-20T00:01:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 2.65
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.53885,
+          -18.41821
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-20T00:01:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 1.86
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.53712,
+          -18.42019
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-20T00:01:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 1.47
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.47827,
+          -18.43695
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-20T00:01:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 2.59
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.50842,
+          -18.44048
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-20T00:01:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 1.04
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.51362,
+          -18.44109
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-20T00:01:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "VIIRS",
+        "frp": 1.04
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.48064,
+          -18.37556
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-13T07:14:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "MODIS",
+        "frp": 6.76
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.51471,
+          -18.44503
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-13T13:42:00Z",
+        "confidence": "low",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "MODIS",
+        "frp": 9.86
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.47775,
+          -18.37559
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-13T13:42:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "MODIS",
+        "frp": 12.87
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.41817,
+          -18.35744
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-13T13:42:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "MODIS",
+        "frp": 10.25
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.51314,
+          -18.43784
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-13T19:25:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "MODIS",
+        "frp": 5.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.42176,
+          -18.35548
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-18T13:38:00Z",
+        "confidence": "nominal",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "MODIS",
+        "frp": 12.53
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.48649,
+          -18.36514
+        ]
+      },
+      "properties": {
+        "datetime": "2026-03-20T01:05:00Z",
+        "confidence": "low",
+        "province": "MATEBELELAND NORTH",
+        "satellite": "MODIS",
+        "frp": 5.46
+      }
+    }
+  ]
+}
