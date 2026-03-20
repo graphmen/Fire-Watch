@@ -154,7 +154,7 @@ function renderParks(geojson) {
     },
     onEachFeature(feature, layer) {
       const p = feature.properties;
-      layer.bindTooltip(`🌿 <b>${p.name}</b><br><span style="font-size:10px">${p.area_ha.toLocaleString()} ha &bull; ${p.authority}</span>`, {
+      layer.bindTooltip(`🌿 <b>${p.NAME_ENG || p.NAME}</b><br><span style="font-size:10px">${p.DESIG_ENG} &bull; ${p.GIS_AREA ? p.GIS_AREA.toFixed(0) + " ha" : ""} &bull; IUCN: ${p.IUCN_CAT}</span>`, {
         sticky: true, opacity: 0.92
       });
     }

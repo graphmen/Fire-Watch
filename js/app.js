@@ -204,7 +204,7 @@ async function loadData() {
       fetch('data/fires.geojson'),
       fetch('data/burned_areas.geojson'),
       fetch('data/Provincial.geojson'),
-      fetch('data/parks.geojson'),
+      fetch('data/pparks.geojson'),
       fetch('data/District.geojson')
     ]);
 
