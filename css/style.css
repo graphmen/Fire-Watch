@@ -562,23 +562,121 @@ body {
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* ── Responsive ─────────────────────────────────────────────── */
-@media (max-width: 1100px) { :root { --panel-width: 300px; } }
-@media (max-width: 900px) {
-  .analytics-panel {
-    position: fixed; top: var(--topbar-height); right: 0;
-    height: calc(100% - var(--topbar-height)); z-index: 300;
-    transform: translateX(100%);
-  }
-  .analytics-panel.open { transform: translateX(0); }
+/* ── Mobile backdrop ─────────────────────────────────────────── */
+.mobile-backdrop {
+  display: none;
+  position: fixed; inset: 0; top: var(--topbar-height);
+  z-index: 290; background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(2px);
 }
-@media (max-width: 700px) {
-  :root { --sidebar-width: 280px; }
-  .sidebar {
-    position: fixed; top: var(--topbar-height); left: 0;
-    height: calc(100% - var(--topbar-height)); z-index: 300;
-    transform: translateX(-100%);
+.mobile-backdrop.visible { display: block; }
+
+/* ── Tablet (≤1100px) — shrink panel ────────────────────────── */
+@media (max-width: 1100px) {
+  :root { --panel-width: 300px; }
+}
+
+/* ── Tablet portrait (≤900px) — panel becomes overlay ───────── */
+@media (max-width: 900px) {
+  :root { --panel-width: 320px; }
+  .analytics-panel {
+    position: fixed;
+    top: var(--topbar-height);
+    right: 0;
+    height: calc(100dvh - var(--topbar-height));
+    min-width: var(--panel-width);
+    z-index: 300;
+    transform: translateX(110%);
+    transition: transform 0.28s cubic-bezier(0.4,0,0.2,1);
+    box-shadow: -4px 0 24px rgba(0,0,0,0.18);
   }
-  .sidebar.open { transform: translateX(0); }
+  .analytics-panel.open {
+    transform: translateX(0);
+  }
+  /* Keep map full-width when panel is hidden */
+  .app-layout { overflow: hidden; }
+}
+
+/* ── Mobile (≤700px) — sidebar + panel both overlay ─────────── */
+@media (max-width: 700px) {
+  :root {
+    --sidebar-width: 290px;
+    --topbar-height: 56px;
+  }
+
+  /* Topbar compact */
+  .topbar { gap: 8px; padding: 0 12px; }
   .topbar-title { display: none; }
+  .topbar-status { display: none; }
+  .topbar-time { display: none; }
+  .topbar-logo span:first-child { font-size: 13px; }
+
+  /* Sidebar becomes a left drawer */
+  .sidebar {
+    position: fixed;
+    top: var(--topbar-height);
+    left: 0;
+    height: calc(100dvh - var(--topbar-height));
+    min-width: var(--sidebar-width);
+    z-index: 300;
+    transform: translateX(-110%);
+    transition: transform 0.28s cubic-bezier(0.4,0,0.2,1);
+    box-shadow: 4px 0 24px rgba(0,0,0,0.18);
+    overflow-y: auto;
+  }
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  /* Collapsed class has no effect on mobile — open/closed drives it */
+  .sidebar.collapsed {
+    width: var(--sidebar-width);
+    min-width: var(--sidebar-width);
+    overflow-y: auto;
+  }
+
+  /* Analytics panel right drawer */
+  .analytics-panel {
+    position: fixed;
+    top: var(--topbar-height);
+    right: 0;
+    height: calc(100dvh - var(--topbar-height));
+    width: min(95vw, 340px);
+    min-width: unset;
+    z-index: 300;
+    transform: translateX(110%);
+    transition: transform 0.28s cubic-bezier(0.4,0,0.2,1);
+    box-shadow: -4px 0 24px rgba(0,0,0,0.18);
+  }
+  .analytics-panel.open {
+    transform: translateX(0);
+  }
+  .analytics-panel.collapsed {
+    width: min(95vw, 340px);
+    min-width: unset;
+    overflow-y: auto;
+  }
+
+  /* Map takes full screen behind the drawers */
+  .app-layout { overflow: hidden; }
+  .map-wrap { width: 100%; }
+
+  /* Legend compact */
+  .map-legend { bottom: 70px; left: 10px; padding: 10px 12px; min-width: 140px; }
+
+  /* Time scrubber compact */
+  .time-scrubber { padding: 14px 12px 8px; gap: 8px; }
+  .scrubber-label { display: none; }
+
+  /* Toast compact */
+  .toast-container { bottom: 16px; right: 12px; left: 12px; }
+  .toast { min-width: unset; max-width: unset; }
+
+  /* Basemap switcher position */
+  .basemap-switcher { top: 10px; right: 10px; }
+}
+
+/* ── Very small phones (≤400px) ──────────────────────────────── */
+@media (max-width: 400px) {
+  :root { --sidebar-width: 100vw; }
+  .analytics-panel { width: 100vw; }
 }

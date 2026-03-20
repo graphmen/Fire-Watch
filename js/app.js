@@ -37,27 +37,90 @@ function startClock() {
   setInterval(tick, 1000);
 }
 
-// ── Sidebar collapse ─────────────────────────────────────────
+// -- Sidebar / panel: mobile drawer + desktop collapse
 function initSidebarToggle() {
   const sidebar  = document.getElementById('sidebar');
   const panel    = document.getElementById('analytics-panel');
   const btnLeft  = document.getElementById('btn-toggle-sidebar');
   const btnRight = document.getElementById('btn-toggle-panel');
 
+  // Inject backdrop element for mobile drawers
+  let backdrop = document.getElementById('mobile-backdrop');
+  if (!backdrop) {
+    backdrop = document.createElement('div');
+    backdrop.id = 'mobile-backdrop';
+    backdrop.className = 'mobile-backdrop';
+    document.body.appendChild(backdrop);
+  }
+
+  const isMobileLeft  = () => window.innerWidth <= 700;
+  const isMobileRight = () => window.innerWidth <= 900;
+  const showBackdrop  = () => backdrop.classList.add('visible');
+  const hideBackdrop  = () => backdrop.classList.remove('visible');
+
+  function openSidebar() {
+    if (isMobileLeft()) {
+      sidebar.classList.add('open');
+      panel.classList.remove('open');
+      showBackdrop();
+    } else {
+      sidebar.classList.remove('collapsed');
+    }
+  }
+  function closeSidebar() {
+    if (isMobileLeft()) sidebar.classList.remove('open');
+    else sidebar.classList.add('collapsed');
+  }
+  function sidebarIsOpen() {
+    return isMobileLeft() ? sidebar.classList.contains('open')
+                          : !sidebar.classList.contains('collapsed');
+  }
+
+  function openPanel() {
+    if (isMobileRight()) {
+      panel.classList.add('open');
+      sidebar.classList.remove('open');
+      showBackdrop();
+    } else {
+      panel.classList.remove('collapsed');
+      setTimeout(() => MapModule.map.invalidateSize(), 320);
+    }
+  }
+  function closePanel() {
+    if (isMobileRight()) panel.classList.remove('open');
+    else panel.classList.add('collapsed');
+  }
+  function panelIsOpen() {
+    return isMobileRight() ? panel.classList.contains('open')
+                           : !panel.classList.contains('collapsed');
+  }
+
+  // Left sidebar toggle
   btnLeft?.addEventListener('click', () => {
-    sidebar.classList.toggle('collapsed');
-    btnLeft.classList.toggle('active');
-  });
-  btnRight?.addEventListener('click', () => {
-    panel.classList.toggle('collapsed');
-    btnRight.classList.toggle('active');
-    // Trigger Leaflet map resize
-    setTimeout(() => MapModule.map.invalidateSize(), 320);
+    if (sidebarIsOpen()) { closeSidebar(); hideBackdrop(); }
+    else openSidebar();
+    btnLeft.classList.toggle('active', sidebarIsOpen());
   });
 
-  // Mobile toggles
-  btnLeft?.addEventListener('dblclick', () => {
-    sidebar.classList.toggle('open');
+  // Right analytics panel toggle
+  btnRight?.addEventListener('click', () => {
+    if (panelIsOpen()) { closePanel(); hideBackdrop(); }
+    else openPanel();
+    btnRight.classList.toggle('active', panelIsOpen());
+  });
+
+  // Backdrop tap closes whichever drawer is open
+  backdrop.addEventListener('click', () => {
+    closeSidebar(); closePanel(); hideBackdrop();
+    btnLeft?.classList.remove('active');
+    btnRight?.classList.remove('active');
+  });
+
+  // On resize: reset mobile-only classes when screen grows to desktop
+  window.addEventListener('resize', () => {
+    if (!isMobileLeft()) sidebar.classList.remove('open');
+    if (!isMobileRight()) panel.classList.remove('open');
+    if (!isMobileLeft() && !isMobileRight()) hideBackdrop();
   });
 }
 
