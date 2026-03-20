@@ -218,6 +218,24 @@ async function loadData() {
     MapModule.renderParks(parksGJ);
     MapModule.renderBurnedAreas(burnedGJ.features);
 
+    // Handle Live NASA FIRMS data if MapKey exists
+    const savedKey = localStorage.getItem('firms_map_key');
+    if (savedKey) {
+      document.getElementById('firms-key').value = savedKey;
+      MapModule.updateFirmsWMS(savedKey);
+      
+      try {
+        const liveFires = await FirmsModule.fetchLiveFires(savedKey);
+        if (liveFires.length > 0) {
+          // Merge live fires into the main dataset and re-process filters/charts
+          firesGJ.features.push(...liveFires);
+          showToast('📡 Live Sync', `${liveFires.length} real-time FIRMS detections added`, 'info');
+        }
+      } catch (e) {
+        console.warn('NASA FIRMS Live fetch failed:', e);
+      }
+    }
+
     // Init filter module — pass provincial GeoJSON for dropdown
     FiltersModule.initFilters(firesGJ.features, provGJ);
     TimeSliderModule.initTimeSlider();
@@ -232,6 +250,7 @@ async function loadData() {
 
     // Wards are loaded lazily on first toggle-on
     initWardsToggle();
+    initFirmsKey();
 
     // Export CSV
     document.getElementById('btn-export-csv')?.addEventListener('click', ChartsModule.exportCSV);
@@ -248,6 +267,26 @@ async function loadData() {
   } finally {
     showLoader(false);
   }
+}
+
+function initFirmsKey() {
+  const btn = document.getElementById('btn-save-key');
+  const input = document.getElementById('firms-key');
+  if (!btn || !input) return;
+
+  btn.addEventListener('click', () => {
+    const key = input.value.trim();
+    if (key) {
+      localStorage.setItem('firms_map_key', key);
+      MapModule.updateFirmsWMS(key);
+      showToast('Key Saved', 'NASA FIRMS Live feeds enabled. Refreshing data...', 'success');
+      setTimeout(() => location.reload(), 1500); // Reload to trigger full API sync
+    } else {
+      localStorage.removeItem('firms_map_key');
+      MapModule.updateFirmsWMS(null);
+      showToast('Key Removed', 'NASA FIRMS Live feeds disabled.', 'info');
+    }
+  });
 }
 
 function showLoader(on) {

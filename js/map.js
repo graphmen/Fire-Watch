@@ -29,15 +29,50 @@ const map = L.map('map', {
 const fireLayer      = L.layerGroup().addTo(map);
 const burnedLayer    = L.layerGroup().addTo(map);
 const adminLayer     = L.layerGroup().addTo(map);
-const districtsLayer = L.layerGroup();   // off by default
-const wardsLayer     = L.layerGroup();   // off by default (large dataset)
+const districtsLayer = L.layerGroup();   
+const wardsLayer     = L.layerGroup();   
 const parksLayer     = L.layerGroup().addTo(map);
+
+// NASA FIRMS Live WMS Layers
+const firmsViirsLayer = L.layerGroup();
+const firmsModisLayer = L.layerGroup();
 
 // Canvas renderer for large polygon layers (wards = 1970 features)
 const canvasRenderer = L.canvas({ padding: 0.5 });
 
 // ── Basemap switcher ──────────────────────────────────────────
 let currentBase = 'light';
+/**
+ * Update NASA FIRMS WMS Layers with a new MapKey
+ */
+function updateFirmsWMS(key) {
+  firmsViirsLayer.clearLayers();
+  firmsModisLayer.clearLayers();
+
+  if (!key) return;
+
+  const viirsUrl = FirmsModule.getWmsUrl('tsd_4_viirs_snpp_24_00', key);
+  const modisUrl = FirmsModule.getWmsUrl('tsd_4_modis_24_00', key);
+
+  if (viirsUrl) {
+    L.tileLayer.wms(viirsUrl, {
+      format: 'image/png',
+      transparent: true,
+      layers: 'tsd_4_viirs_snpp_24_00',
+      attribution: 'NASA FIRMS VIIRS'
+    }).addTo(firmsViirsLayer);
+  }
+
+  if (modisUrl) {
+    L.tileLayer.wms(modisUrl, {
+      format: 'image/png',
+      transparent: true,
+      layers: 'tsd_4_modis_24_00',
+      attribution: 'NASA FIRMS MODIS'
+    }).addTo(firmsModisLayer);
+  }
+}
+
 function switchBasemap(name) {
   Object.values(BASE_LAYERS).forEach(l => { if (map.hasLayer(l)) map.removeLayer(l); });
   BASE_LAYERS[name].addTo(map);
@@ -261,12 +296,14 @@ function formatDate(isoStr) {
 // ── Layer visibility toggles ─────────────────────────────────
 function setupLayerToggles() {
   const toggleDefs = [
-    { id: 'toggle-fires',     layer: fireLayer,      key: 'fires' },
-    { id: 'toggle-burned',    layer: burnedLayer,    key: 'burned' },
-    { id: 'toggle-admin',     layer: adminLayer,     key: 'admin' },
-    { id: 'toggle-districts', layer: districtsLayer, key: 'districts' },
-    { id: 'toggle-wards',     layer: wardsLayer,     key: 'wards' },
-    { id: 'toggle-parks',     layer: parksLayer,     key: 'parks' }
+    { id: 'toggle-fires',     layer: fireLayer },
+    { id: 'toggle-burned',    layer: burnedLayer },
+    { id: 'toggle-admin',     layer: adminLayer },
+    { id: 'toggle-districts', layer: districtsLayer },
+    { id: 'toggle-wards',     layer: wardsLayer },
+    { id: 'toggle-parks',     layer: parksLayer },
+    { id: 'toggle-wms-viirs', layer: firmsViirsLayer },
+    { id: 'toggle-wms-modis', layer: firmsModisLayer }
   ];
   toggleDefs.forEach(({ id, layer }) => {
     const el = document.getElementById(id);

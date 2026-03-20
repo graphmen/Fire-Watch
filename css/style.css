@@ -553,6 +553,10 @@ body {
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.5; transform: scale(0.85); }
 }
+@keyframes blink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.9); }
+}
 @keyframes slideIn {
   from { opacity: 0; transform: translateX(30px); }
   to { opacity: 1; transform: translateX(0); }
@@ -561,6 +565,31 @@ body {
   to { opacity: 0; transform: translateY(8px); }
 }
 @keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Live Indicators ────────────────────────────────────────── */
+.live-indicator {
+  width: 8px;
+  height: 8px;
+  background: #ff4d4d;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(255, 77, 77, 0.6);
+  animation: blink 1.5s infinite ease-in-out;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+.badge-nrt {
+  font-size: 8px;
+  font-weight: 800;
+  background: rgba(255, 77, 77, 0.15);
+  color: #ff4d4d;
+  padding: 1px 4px;
+  border-radius: 4px;
+  margin-left: 6px;
+  border: 1px solid rgba(255, 77, 77, 0.3);
+  vertical-align: middle;
+}
+.btn-sm { padding: 4px 8px; font-size: 11px; cursor: pointer; }
+.btn-sm:hover { filter: brightness(1.1); }
 
 /* ── Mobile backdrop ─────────────────────────────────────────── */
 .mobile-backdrop {

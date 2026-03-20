@@ -198,6 +198,36 @@
         </div>
       </div>
 
+      <!-- Section: NASA FIRMS (Live 24h) -->
+      <div class="sidebar-section">
+        <div class="section-header">
+          <span class="section-title">📡 Live NASA FIRMS (24h)</span>
+          <span class="section-toggle open">▾</span>
+        </div>
+        <div class="layer-toggles">
+          <div class="layer-toggle" id="toggle-wms-viirs">
+            <span class="live-indicator"></span>
+            <span class="layer-label">VIIRS S-NPP <span class="badge-nrt">LIVE</span></span>
+            <span class="toggle-switch"></span>
+          </div>
+          <div class="layer-toggle" id="toggle-wms-modis">
+            <span class="live-indicator"></span>
+            <span class="layer-label">MODIS <span class="badge-nrt">LIVE</span></span>
+            <span class="toggle-switch"></span>
+          </div>
+          <div class="config-item" style="margin-top:10px; padding:0 8px;">
+            <label style="font-size:10px; color:var(--text-muted); display:block; margin-bottom:4px;">NASA FIRMS API Key:</label>
+            <div style="display:flex; gap:5px;">
+              <input type="password" id="firms-key" placeholder="Enter MapKey..." 
+                     style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:4px; padding:4px 8px; font-size:11px; color:white; flex:1;" />
+              <button id="btn-save-key" class="btn-sm" style="background:var(--ema-green); color:white; border:none; border-radius:4px; padding:4px 8px; cursor:pointer; font-size:10px;">Save</button>
+            </div>
+            <a href="https://firms.modaps.eosdis.nasa.gov/api/map_key/" target="_blank" 
+               style="font-size:9px; color:var(--ema-green); text-decoration:none; display:block; margin-top:5px;">Get a free MapKey ↗</a>
+          </div>
+        </div>
+      </div>
+
       <!-- Section: Reset -->
       <div class="sidebar-section">
         <button class="btn-sm btn-outline" id="btn-reset-filters" style="width:100%;">↺ Reset All Filters</button>
@@ -573,6 +603,7 @@
   </style>
 
   <!-- App modules (order matters) -->
+  <script src="js/firms.js"></script>
   <script src="js/map.js"></script>
   <script src="js/charts.js"></script>
   <script src="js/alerts.js"></script>
@@ -580,23 +611,6 @@
   <script src="js/filters.js"></script>
   <script src="js/app.js"></script>
 
-  <!-- Basemap switcher inline fix (3 visible buttons via JS) -->
-  <script>
-    // Override basemap switcher with EMA-branded labels
-    document.addEventListener('DOMContentLoaded', () => {
-      const switcher = document.querySelector('.basemap-switcher');
-      if (switcher) {
-        switcher.innerHTML = `
-        <button class="basemap-btn active" data-base="light">Light</button>
-        <button class="basemap-btn" data-base="osm">Street</button>
-        <button class="basemap-btn" data-base="satellite">Satellite</button>
-      `;
-        switcher.querySelectorAll('.basemap-btn').forEach(btn => {
-          btn.addEventListener('click', () => switchBasemap(btn.dataset.base));
-        });
-      }
-    });
-  </script>
 
 </body>
 
