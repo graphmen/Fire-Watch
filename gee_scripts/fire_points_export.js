@@ -49,15 +49,25 @@ var firePointsWithProvinces = firePoints.map(function(feature) {
   var parentProv = provinces.filterBounds(point).first();
   var provName = ee.String(ee.Algorithms.If(parentProv, parentProv.get('ADM1_NAME'), 'UNKNOWN'));
   
-  // Capture properties from the GEE image (which were passed via reduceToVectors)
-  // Confidence in FIRMS GEE is often 0-100 or 'L/N/H' strings depending on sat
+  // Capture properties from the GEE image
   var confRaw = feature.get('confidence'); 
+  var satellite = ee.String(feature.get('satellite'));
+  
+  // Use ee.Algorithms.ObjectType to safely check type on server-side
+  var confType = ee.Algorithms.ObjectType(confRaw);
+  
   var confStr = ee.String(ee.Algorithms.If(
-    ee.Algorithms.IsEqual(ee.ObjectType(confRaw), 'String'),
+    ee.Algorithms.IsEqual(confType, 'String'),
+    // If it's a string (H/N/L)
     ee.Algorithms.If(ee.String(confRaw).equals('H'), 'high', 
       ee.Algorithms.If(ee.String(confRaw).equals('L'), 'low', 'nominal')),
-    ee.Algorithms.If(ee.Number(confRaw).gte(80), 'high',
-      ee.Algorithms.If(ee.Number(confRaw).lt(40), 'low', 'nominal'))
+    // If it's a number (0-2 for VIIRS, 0-100 for MODIS)
+    ee.Algorithms.If(satellite.contains('VIIRS'),
+      ee.Algorithms.If(ee.Number(confRaw).eq(2), 'high', 
+        ee.Algorithms.If(ee.Number(confRaw).eq(0), 'low', 'nominal')),
+      ee.Algorithms.If(ee.Number(confRaw).gte(80), 'high',
+        ee.Algorithms.If(ee.Number(confRaw).lt(40), 'low', 'nominal'))
+    )
   ));
 
   return ee.Feature(point, {
