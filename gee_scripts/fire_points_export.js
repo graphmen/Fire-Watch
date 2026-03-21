@@ -23,32 +23,37 @@ var dataset = ee.ImageCollection('FIRMS')
   .filterDate('2025-06-01', '2026-03-20');
 
 // 3. Convert ImageCollection to FeatureCollection (Point Detections)
-var firePoints = dataset.map(function(img) {
+var firePoints = dataset.map(function (img) {
   // Select a temperature band to identify fire pixels
   var t21 = img.select('T21');
-  var mask = t21.gt(0); 
-  
+  var mask = t21.gt(0);
+
   // reduceToVectors requires an integer band as the first input to define groups
   // We use the mask itself cast to integer (1 = fire)
   var labeledImg = mask.toInt().rename('fire_label').addBands(img);
-  
-  return labeledImg.updateMask(mask).reduceToVectors({
+
+  var result = labeledImg.updateMask(mask).reduceToVectors({
     geometry: geometry,
     scale: 1000,
     geometryType: 'centroid',
     labelProperty: 'fire_label',
     reducer: ee.Reducer.first()
   });
+  
+  // Explicitly copy metadata from the source image to each feature
+  return result.map(function(f) {
+    return f.copyProperties(img, ['system:time_start', 'satellite', 'confidence', 'frp']);
+  });
 }).flatten();
 
 // 4. Spatial Join: Assign Province Name to Each Fire Point
-var firePointsWithProvinces = firePoints.map(function(feature) {
+var firePointsWithProvinces = firePoints.map(function (feature) {
   var point = feature.geometry();
-  
+
   // Find which province contains this point
   var parentProv = provinces.filterBounds(point).first();
   var provName = ee.String(ee.Algorithms.If(parentProv, parentProv.get('ADM1_NAME'), 'UNKNOWN'));
-  
+
   // Assign simple properties. We will handle the normalization in the dashboard filters if needed.
   return ee.Feature(point, {
     'province': provName,
@@ -69,4 +74,4 @@ Export.table.toDrive({
 
 print('Processing ' + firePointsWithProvinces.size().getInfo() + ' potential fire detections...');
 Map.centerObject(geometry, 6);
-Map.addLayer(firePointsWithProvinces.draw({color: 'red', pointRadius: 1}), {}, 'Fire Detections');
+Map.addLayer(firePointsWithProvinces.draw({ color: 'red', pointRadius: 1 }), {}, 'Fire Detections');
