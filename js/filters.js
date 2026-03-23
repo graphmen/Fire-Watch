@@ -4,9 +4,9 @@
 
 let _allFires = [];
 let _filterState = {
-  startDate: '2025-07-01',
-  endDate:   '2026-03-20',
-  confidence: ['high', 'low'],
+  startDate: '', // Will be set dynamically
+  endDate:   '', // Will be set dynamically
+  confidence: ['high', 'nominal', 'low'],
   province: 'all',
   landcover: 'all',
   nearPark: false
@@ -96,30 +96,57 @@ function updateFilterBadge(count) {
   if (el) el.textContent = count + ' fires';
 }
 
-function initFilters(allFires, provincialGJ) {
-  _allFires = allFires;
-  populateProvinceDropdown(allFires, provincialGJ);
-  populateLandCoverDropdown(allFires);
+// Initialize Filter Module
+function initFilters(fires, provincialGJ) {
+  _allFires = fires;
+  populateProvinceDropdown(fires, provincialGJ);
+  populateLandCoverDropdown(fires);
 
+  // Dynamic Date Range Detection
+  if (fires.length > 0) {
+    const dates = fires.map(f => new Date(f.properties.datetime)).filter(d => !isNaN(d));
+    if (dates.length > 0) {
+      const minDate = new Date(Math.min(...dates));
+      const maxDate = new Date(Math.max(...dates));
+      
+      _filterState.startDate = minDate.toISOString().split('T')[0];
+      _filterState.endDate   = maxDate.toISOString().split('T')[0];
+
+      // Update UI inputs
+      // Note: The IDs in the HTML should be 'filter-start-date' and 'filter-end-date'
+      // if they are different from 'filter-date-start' and 'filter-date-end'
+      const startEl = document.getElementById('filter-date-start') || document.getElementById('filter-start-date');
+      const endEl   = document.getElementById('filter-date-end')   || document.getElementById('filter-end-date');
+      if (startEl) startEl.value = _filterState.startDate;
+      if (endEl)   endEl.value   = _filterState.endDate;
+    }
+  }
+
+  setupEventListeners();
+  filterAndRender(); // Initial render after setup
+}
+
+function setupEventListeners() {
   // Date pickers
   const startEl = document.getElementById('filter-date-start');
   const endEl   = document.getElementById('filter-date-end');
-  if (startEl) { startEl.value = _filterState.startDate; startEl.addEventListener('change', e => { _filterState.startDate = e.target.value; filterAndRender(); }); }
-  if (endEl)   { endEl.value   = _filterState.endDate;   endEl.addEventListener('change', e => { _filterState.endDate   = e.target.value; filterAndRender(); }); }
+  if (startEl) { startEl.addEventListener('change', e => { _filterState.startDate = e.target.value; filterAndRender(); }); }
+  if (endEl)   { endEl.addEventListener('change', e => { _filterState.endDate   = e.target.value; filterAndRender(); }); }
 
   // Confidence checkboxes
-  ['high', 'low'].forEach(c => {
-    const cb = document.getElementById(`conf-${c}`);
-    if (!cb) return;
-    cb.checked = true;
-    cb.addEventListener('change', () => {
-      if (cb.checked) {
-        if (!_filterState.confidence.includes(c)) _filterState.confidence.push(c);
-      } else {
-        _filterState.confidence = _filterState.confidence.filter(x => x !== c);
-      }
-      filterAndRender();
-    });
+  ['high', 'nominal', 'low'].forEach(c => {
+    const el = document.getElementById(`conf-${c}`);
+    if (el) {
+      el.checked = _filterState.confidence.includes(c);
+      el.addEventListener('change', () => {
+        if (el.checked) {
+          if (!_filterState.confidence.includes(c)) _filterState.confidence.push(c);
+        } else {
+          _filterState.confidence = _filterState.confidence.filter(x => x !== c);
+        }
+        filterAndRender();
+      });
+    }
   });
 
   // Province dropdown

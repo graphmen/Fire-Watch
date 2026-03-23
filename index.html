@@ -97,11 +97,11 @@
           <span class="section-toggle open">▾</span>
         </div>
         <div class="time-slider-wrap">
-          <div class="time-slider-labels">
-            <span>Jul 2025</span><span>Oct 2025</span><span>Mar 2026</span>
+          <div class="time-slider-labels" id="map-time-labels">
+            <span id="label-start">Start</span><span id="label-mid">Mid</span><span id="label-end">End</span>
           </div>
-          <input type="range" class="time-slider" id="sidebar-time-slider" min="0" max="262" value="262" />
-          <div class="time-slider-value" id="sidebar-slider-value">20 Mar 2026</div>
+          <input type="range" class="time-slider" id="sidebar-time-slider" min="0" max="100" value="100" />
+          <div class="time-slider-value" id="sidebar-slider-value">...</div>
           <div class="time-slider-controls">
             <button class="btn-sm btn-primary" id="btn-play-slider">▶ Play</button>
             <button class="btn-sm btn-outline" id="btn-reset-slider">↺ Reset</button>
@@ -121,6 +121,12 @@
             <span class="checkbox-box"></span>
             <span class="checkbox-label">High Confidence</span>
             <span class="checkbox-badge badge-high">VIIRS/MODIS</span>
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" id="conf-nominal" checked />
+            <span class="checkbox-box"></span>
+            <span class="checkbox-label">Nominal / Unk</span>
+            <span class="checkbox-badge" style="background:#10b981; color:white; font-size:9px; padding:1px 4px; border-radius:3px;">GEE EXPORT</span>
           </label>
           <label class="checkbox-item">
             <input type="checkbox" id="conf-low" checked />
@@ -210,7 +216,7 @@
             <span class="layer-label">VIIRS S-NPP <span class="badge-nrt">LIVE</span></span>
             <span class="toggle-switch"></span>
           </div>
-          <div class="layer-toggle" id="toggle-wms-modis">
+      <div class="layer-toggle" id="toggle-wms-modis">
             <span class="live-indicator"></span>
             <span class="layer-label">MODIS <span class="badge-nrt">LIVE</span></span>
             <span class="toggle-switch"></span>
@@ -224,6 +230,26 @@
             </div>
             <a href="https://firms.modaps.eosdis.nasa.gov/api/map_key/" target="_blank" 
                style="font-size:9px; color:var(--ema-green); text-decoration:none; display:block; margin-top:5px;">Get a free MapKey ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section: Historical Burnt Areas -->
+      <div class="sidebar-section">
+        <div class="section-header">
+          <span class="section-title">📅 Historical Burnt Areas</span>
+          <span class="section-toggle open">▾</span>
+        </div>
+        <div>
+          <div style="font-size:10px; color:var(--text-muted); margin-bottom: 8px;">
+            Load annual burnt area summaries (2001-2024)
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="filter-historical-year">Select Year</label>
+            <select class="form-control" id="filter-historical-year">
+              <option value="none">None (Hide layer)</option>
+              <!-- Populate dynamically 2001 to 2024 -->
+            </select>
           </div>
         </div>
       </div>
@@ -358,6 +384,17 @@
           </div>
           <div class="chart-box" style="max-height:180px; display:flex; align-items:center; justify-content:center;">
             <canvas id="chart-confidence" height="150" style="max-width:200px;"></canvas>
+          </div>
+        </div>
+
+        <!-- Historical Trend Chart -->
+        <div class="chart-section">
+          <div class="chart-header">
+            <span class="chart-title">Historical Burnt Trend (2001-2024)</span>
+            <span class="chart-badge">Annual Features</span>
+          </div>
+          <div class="chart-box">
+            <canvas id="chart-historical-trend" height="150"></canvas>
           </div>
         </div>
 

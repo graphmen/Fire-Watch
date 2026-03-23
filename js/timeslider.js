@@ -1,17 +1,45 @@
-/**
- * timeslider.js — Seasonal time slider + animation playback
- */
+let _seasonStart = new Date('2025-07-01');
+let _seasonEnd   = new Date('2026-03-20');
+let _totalDays   = Math.floor((_seasonEnd - _seasonStart) / 86400000);
 
-const SEASON_START = new Date('2025-07-01');
-const SEASON_END   = new Date('2026-03-20');
-const TOTAL_DAYS   = Math.floor((SEASON_END - SEASON_START) / 86400000);
-
-let _currentDay  = TOTAL_DAYS;
+let _currentDay  = _totalDays;
 let _animTimer   = null;
 let _isPlaying   = false;
 
+function setTimeRange(start, end) {
+  _seasonStart = new Date(start);
+  _seasonEnd   = new Date(end);
+  _totalDays   = Math.floor((_seasonEnd - _seasonStart) / 86400000);
+  _currentDay  = _totalDays;
+  
+  // Update HTML labels if they exist
+  const lStart = document.getElementById('label-start');
+  const lMid   = document.getElementById('label-mid');
+  const lEnd   = document.getElementById('label-end');
+  
+  if (lStart) lStart.textContent = _seasonStart.toLocaleDateString('en-ZW', { month: 'short', year: 'numeric' });
+  if (lEnd)   lEnd.textContent   = _seasonEnd.toLocaleDateString('en-ZW', { month: 'short', year: 'numeric' });
+  if (lMid) {
+    const mid = new Date(_seasonStart.getTime() + (_seasonEnd - _seasonStart) / 2);
+    lMid.textContent = mid.toLocaleDateString('en-ZW', { month: 'short', year: 'numeric' });
+  }
+
+  // Re-sync UI if slider exists
+  const slider = document.getElementById('map-time-slider');
+  if (slider) {
+    slider.max = _totalDays;
+    slider.value = _totalDays;
+  }
+  
+  const sideSlider = document.getElementById('sidebar-time-slider');
+  if (sideSlider) {
+    sideSlider.max = _totalDays;
+    sideSlider.value = _totalDays;
+  }
+}
+
 function dayToDate(day) {
-  const d = new Date(SEASON_START);
+  const d = new Date(_seasonStart);
   d.setDate(d.getDate() + day);
   return d;
 }
@@ -24,7 +52,7 @@ function updateSliderUI(day) {
   const slider = document.getElementById('map-time-slider');
   if (slider) {
     slider.value = day;
-    const pct = (day / TOTAL_DAYS * 100).toFixed(1);
+    const pct = (day / _totalDays * 100).toFixed(1);
     slider.style.setProperty('--pct', pct + '%');
   }
 
@@ -68,12 +96,12 @@ function play() {
   if (playBtn) { playBtn.textContent = '⏸ Pause'; }
 
   // Start from beginning if at end
-  if (_currentDay >= TOTAL_DAYS) _currentDay = 0;
+  if (_currentDay >= _totalDays) _currentDay = 0;
 
   _animTimer = setInterval(() => {
     _currentDay += 7;
-    if (_currentDay >= TOTAL_DAYS) {
-      _currentDay = TOTAL_DAYS;
+    if (_currentDay >= _totalDays) {
+      _currentDay = _totalDays;
       pause();
     }
     applySliderDay(_currentDay);
@@ -98,9 +126,9 @@ function initTimeSlider() {
   if (!slider) return;
 
   slider.min  = 0;
-  slider.max  = TOTAL_DAYS;
-  slider.value = TOTAL_DAYS;
-  updateSliderUI(TOTAL_DAYS);
+  slider.max  = _totalDays;
+  slider.value = _totalDays;
+  updateSliderUI(_totalDays);
 
   slider.addEventListener('input', () => {
     if (_isPlaying) pause();
@@ -116,7 +144,7 @@ function initTimeSlider() {
   // Sidebar slider (mirrors map scrubber)
   const sideSlider = document.getElementById('sidebar-time-slider');
   if (sideSlider) {
-    sideSlider.min = 0; sideSlider.max = TOTAL_DAYS; sideSlider.value = TOTAL_DAYS;
+    sideSlider.min = 0; sideSlider.max = _totalDays; sideSlider.value = _totalDays;
     sideSlider.addEventListener('input', () => {
       if (_isPlaying) pause();
       slider.value = sideSlider.value;
@@ -125,4 +153,4 @@ function initTimeSlider() {
   }
 }
 
-window.TimeSliderModule = { initTimeSlider, reset, play, pause };
+window.TimeSliderModule = { initTimeSlider, reset, play, pause, setTimeRange };

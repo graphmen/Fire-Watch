@@ -32,6 +32,7 @@ const adminLayer     = L.layerGroup().addTo(map);
 const districtsLayer = L.layerGroup();   
 const wardsLayer     = L.layerGroup();   
 const parksLayer     = L.layerGroup().addTo(map);
+const historicalBurntLayer = L.layerGroup().addTo(map);
 
 // NASA FIRMS Live WMS Layers
 const firmsViirsLayer = L.layerGroup();
@@ -265,16 +266,21 @@ function renderFires(features) {
       ? `<span class="badge" style="background:#E8F5E9;color:#2E7D32;border:1px solid #A5D6A7;margin-top:6px;display:inline-block;">⚠ Near ${p.near_park}</span>`
       : '';
 
+    const confText = (p.confidence || 'Nominal').toString().toUpperCase();
+    const satText  = p.satellite || 'NASA FIRMS';
+    const frpValue = p.frp !== null && p.frp !== undefined ? p.frp : 'N/A';
+    const lCover   = p.landcover || 'Vegetation';
+
     circle.bindPopup(`
       <div class="fire-popup">
         <h4>🔥 Fire Detection — ${p.id}</h4>
-        <div class="meta">📡 Satellite: <b>${p.satellite}</b></div>
+        <div class="meta">📡 Satellite: <b>${satText}</b></div>
         <div class="meta">📅 ${formatDate(p.datetime)}</div>
         <div class="meta">📍 ${p.province}</div>
-        <div class="meta">🌿 Land cover: ${p.landcover}</div>
-        <div class="meta">⚡ FRP: <b>${p.frp} MW</b></div>
+        <div class="meta">🌿 Land cover: ${lCover}</div>
+        <div class="meta">⚡ FRP: <b>${frpValue} MW</b></div>
         <span class="badge" style="background:${isHigh ? 'rgba(211,47,47,0.12)' : 'rgba(249,168,37,0.15)'};color:${isHigh ? '#C62828' : '#E65100'};">
-          ${isHigh ? '🔴' : '🟡'} ${p.confidence.toUpperCase()} Confidence
+          ${isHigh ? '🔴' : '🟡'} ${confText} Confidence
         </span>
         ${parkBadge}
       </div>
@@ -327,5 +333,54 @@ function updateFireCount(n) {
 // ── Scale / attribution positioning fix ─────────────────────
 L.control.scale({ imperial: false, position: 'bottomright' }).addTo(map);
 
+// ── Historical Burnt Areas (Lazy Load) ──────────────────────
+async function loadHistoricalBurntYear(year) {
+  historicalBurntLayer.clearLayers();
+  
+  if (!year || year === 'none') return;
+  
+  showToast('Loading...', `Fetching Historical Burnt Areas for ${year}`, 'info');
+  
+  try {
+    const url = `data/burnt/Zimbabwe_Fire_${year}.geojson`;
+    const resp = await fetch(url);
+    if (!resp.ok) throw new Error('Failed to load file');
+    const geojson = await resp.json();
+    
+    L.geoJSON(geojson, {
+      renderer: canvasRenderer, // Critical for performance with thousands of features
+      style: {
+        color: '#6d28d9',        // Deep purple stroke
+        weight: 1,
+        fillColor: '#8b5cf6',    // Violet fill
+        fillOpacity: 0.5
+      },
+      onEachFeature(feature, layer) {
+        layer.bindPopup(`
+          <div class="fire-popup">
+            <h4 style="color:#8b5cf6">🔥 Historical Burn Area</h4>
+            <div class="meta">📅 Year: <b>${year}</b></div>
+          </div>
+        `);
+      }
+    }).addTo(historicalBurntLayer);
+    
+    showToast('Success', `Loaded ${geojson.features.length} burnt areas for ${year}`, 'success');
+  } catch (err) {
+    console.error('Error loading historical burnt layer:', err);
+    showToast('Error', `Could not load data for ${year}`, 'danger');
+  }
+}
+
 // Expose globally
-window.MapModule = { map, renderFires, renderBurnedAreas, renderProvinces, renderDistricts, renderWards, renderParks, setupLayerToggles };
+window.MapModule = { 
+  map, 
+  renderFires, 
+  renderBurnedAreas, 
+  renderProvinces, 
+  renderDistricts, 
+  renderWards, 
+  renderParks, 
+  setupLayerToggles,
+  loadHistoricalBurntYear
+};

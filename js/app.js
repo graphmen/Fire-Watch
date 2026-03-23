@@ -236,17 +236,34 @@ async function loadData() {
       }
     }
 
-    // Init filter module — pass provincial GeoJSON for dropdown
+    // Dynamic Date Range Detection for historical data
+    let minDate = '2025-06-01';
+    let maxDate = new Date().toISOString().split('T')[0];
+    
+    if (firesGJ.features.length > 0) {
+      const dates = firesGJ.features.map(f => new Date(f.properties.datetime)).filter(d => !isNaN(d));
+      if (dates.length > 0) {
+        minDate = new Date(Math.min(...dates)).toISOString().split('T')[0];
+        maxDate = new Date(Math.max(...dates)).toISOString().split('T')[0];
+      }
+    }
+
+    // Init modules with dynamic range
     FiltersModule.initFilters(firesGJ.features, provGJ);
+    TimeSliderModule.setTimeRange(minDate, maxDate);
     TimeSliderModule.initTimeSlider();
 
     // Init charts
     ChartsModule.initWeeklyChart(firesGJ.features);
     ChartsModule.initBurnedChart(burnedGJ.features);
     ChartsModule.initConfChart(firesGJ.features);
+    ChartsModule.initHistoricalTrendChart();
 
     // Setup layer toggles (fires/burned/admin/districts/wards/parks)
     MapModule.setupLayerToggles();
+
+    // Setup Historical Burnt Year Dropdown
+    initHistoricalYearDropdown();
 
     // Wards are loaded lazily on first toggle-on
     initWardsToggle();
@@ -278,14 +295,32 @@ function initFirmsKey() {
     const key = input.value.trim();
     if (key) {
       localStorage.setItem('firms_map_key', key);
+      showToast('Key Saved', 'MapKey configured. Enable a LIVE layer to test.', 'success');
       MapModule.updateFirmsWMS(key);
-      showToast('Key Saved', 'NASA FIRMS Live feeds enabled. Refreshing data...', 'success');
-      setTimeout(() => location.reload(), 1500); // Reload to trigger full API sync
     } else {
       localStorage.removeItem('firms_map_key');
       MapModule.updateFirmsWMS(null);
       showToast('Key Removed', 'NASA FIRMS Live feeds disabled.', 'info');
     }
+  });
+}
+
+function initHistoricalYearDropdown() {
+  const select = document.getElementById('filter-historical-year');
+  if (!select) return;
+
+  // Populate years 2024 down to 2001
+  for (let y = 2024; y >= 2001; y--) {
+    const opt = document.createElement('option');
+    opt.value = y;
+    opt.textContent = y;
+    select.appendChild(opt);
+  }
+
+  // Listen for changes
+  select.addEventListener('change', (e) => {
+    const year = e.target.value;
+    MapModule.loadHistoricalBurntYear(year);
   });
 }
 

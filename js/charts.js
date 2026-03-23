@@ -129,15 +129,27 @@ let confChart = null;
 function initConfChart(fires) {
   const ctx = document.getElementById('chart-confidence');
   if (!ctx) return;
-  const high = fires.filter(f => f.properties.confidence === 'high').length;
-  const low  = fires.filter(f => f.properties.confidence === 'low').length;
+  
+  // Robust confidence counting (handling null/raw data)
+  const high = fires.filter(f => {
+    const c = (f.properties.confidence || '').toString().toLowerCase();
+    return c === 'high' || c === 'h' || parseInt(c) >= 80;
+  }).length;
+  
+  const low = fires.filter(f => {
+    const c = (f.properties.confidence || '').toString().toLowerCase();
+    return c === 'low' || c === 'l' || (parseInt(c) > 0 && parseInt(c) <= 30);
+  }).length;
+  
+  const nominal = fires.length - high - low;
+
   confChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-      labels: ['High Confidence', 'Low Confidence'],
+      labels: ['High', 'Nominal / Unk', 'Low'],
       datasets: [{
-        data: [high, low],
-        backgroundColor: ['#ef4444', '#f59e0b'],
+        data: [high, nominal, low],
+        backgroundColor: ['#ef4444', '#10b981', '#f59e0b'],
         borderColor: '#111827',
         borderWidth: 3,
         hoverOffset: 8
@@ -152,6 +164,47 @@ function initConfChart(fires) {
       cutout: '65%'
     }
   });
+}
+
+// ── Historical trend chart (2001-2024) ─────────────────────────
+let trendChart = null;
+
+async function initHistoricalTrendChart() {
+  const ctx = document.getElementById('chart-historical-trend');
+  if (!ctx) return;
+  
+  try {
+    const resp = await fetch('data/historical_trend.json');
+    if (!resp.ok) throw new Error('Could not load historical trend data');
+    const trendData = await resp.json();
+    
+    const labels = trendData.map(d => d.year);
+    const data = trendData.map(d => d.count);
+    
+    trendChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [{
+          label: 'Burnt Features',
+          data,
+          backgroundColor: '#8b5cf6', // Indigo/Purple color for historical
+          borderColor: '#6d28d9',
+          borderWidth: 1,
+          borderRadius: 4
+        }]
+      },
+      options: {
+        ...CHART_OPTS_BASE,
+        scales: {
+          x: { grid: { display: false } },
+          y: { grid: { color: 'rgba(99,149,255,0.07)' }, beginAtZero: true }
+        }
+      }
+    });
+  } catch (err) {
+    console.error('Trend chart error:', err);
+  }
 }
 
 // ── Stat cards ────────────────────────────────────────────────
@@ -254,4 +307,4 @@ function exportCSV() {
   showToast('CSV Export', `${filtered.length} records exported`, 'success');
 }
 
-window.ChartsModule = { initWeeklyChart, initBurnedChart, initConfChart, update, exportCSV };
+window.ChartsModule = { initWeeklyChart, initBurnedChart, initConfChart, initHistoricalTrendChart, update, exportCSV };
